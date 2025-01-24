@@ -1,0 +1,29 @@
+*{
+    
+
+}
+html{
+    background-color: darkslategray
+}
+
+div{
+    color: lightslategray;
+    font-size: 2rem;
+}
+
+main{
+    border: 2px solid darkslategray;
+    border-radius: 100px;
+}
+
+footer{
+    text-align: right;
+    
+
+}
+
+footer li{
+    color: lightslategray;
+    font-size: 1rem;
+    
+}

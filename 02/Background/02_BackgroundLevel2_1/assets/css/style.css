@@ -1,0 +1,19 @@
+section{
+    background: url(../img/holzwand.jpg);
+    /* background-repeat: repeat-y;  */
+    background-size: contain;
+    color: white;
+    text-align: center;
+
+
+}
+
+article{
+    background: url(../img/Fenster.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    
+    
+}
+

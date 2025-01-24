@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    background-color: grey;
+    text-shadow: 2px 2px black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+}
+
+p{
+    padding-left: 40px;
+}
+p:first-of-type{
+    text-indent: 10%;
+    word-spacing: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+
+p:nth-of-type(2){
+    text-indent: 10%;
+    word-spacing: -.4ch;
+    margin-bottom: 10px;
+}
+
+h2{
+    text-shadow: 2px 2px black;
+    letter-spacing: 0.5rem;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+p:nth-of-type(3){
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px; */
+    background-color: grey;
+    /* text-shadow: 2px 2px black; */
+    /* color: white; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;;
+}
+
+p:nth-of-type(4){
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px; */
+    background-color: rgb(65, 55, 55);
+    /* text-shadow: 2px 2px black; */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+}

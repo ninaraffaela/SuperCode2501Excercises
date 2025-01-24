@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+
+img{
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+
+    /* display: inline-block; */
+    /* width: 16.6%; */
+}
+
+body div:first-of-type{
+    
+}
+
+body div:nth-of-type(2){
+    
+}
+
+body div:nth-of-type(3){
+    
+}
+
+body div:nth-of-type(4){
+    
+}
+
+body div:nth-of-type(5){
+    
+}
+
+body div:nth-of-type(6){
+    
+}

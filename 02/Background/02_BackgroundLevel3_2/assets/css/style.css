@@ -1,0 +1,36 @@
+body{
+    font-family: Arial;
+}
+
+.backgrounds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgrounds div{
+    font-size: small;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+
+.b-color{
+    background-color: rgb(238, 180, 80);
+}
+
+.b-image{
+    background: url(../img/sunset.jpg);
+    background-size: cover;
+}
+
+.b-gradient{
+    background-image: linear-gradient(to right, rgb(240, 156, 77), rgb(100, 196, 196));
+}
+
+/* background-color
+background-image
+background-position
+background-size
+optional: 
+background */
