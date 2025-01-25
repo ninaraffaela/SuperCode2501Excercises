@@ -1,43 +1,42 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html{
-    font-size: 10px;
+    box-sizing: border-box;
 }
 
 
-img{
+section{
     display: inline-block;
-    width: 300px;
-    margin: 10px;
-
-    /* display: inline-block; */
-    /* width: 16.6%; */
-}
-
-body div:first-of-type{
+    margin-left: 50px;
+    width: 100vw;
+    height: 100vh;
     
 }
 
-body div:nth-of-type(2){
-    
+section img{
+    display: inline;
 }
 
-body div:nth-of-type(3){
-    
+img:first-of-type{
+    width: 100px;
 }
 
-body div:nth-of-type(4){
-    
+img:nth-of-type(2){
+    width: 20%;
 }
 
-body div:nth-of-type(5){
-    
+img:nth-of-type(3){
+    width: 10em;
 }
 
-body div:nth-of-type(6){
-    
+img:nth-of-type(4){
+    width: 15rem;
+}
+
+img:nth-of-type(5){
+    width: 12vw;
+}
+
+img:nth-of-type(6){
+    width: 15vh
 }
