@@ -17,4 +17,5 @@ background-size: contain;
     background-position: right;
 
     ABER
-    text und hintergrundbild lässt sich nciht voneinander trennen, wenn ich im gleichen container bin. oder?
+    text und hintergrundbild lässt sich nciht voneinander trennen
+     weil ich im gleichen container bin. oder?
