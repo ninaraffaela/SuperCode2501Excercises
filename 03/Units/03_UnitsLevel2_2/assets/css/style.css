@@ -2,11 +2,33 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
+body{
+    background: url(../img/sunset.jpg)
+
+}
+
+
 h1{
-    background-color: beige;
+    width: 80vw;
+    height: 10vh;
+    background-color: rgba(52, 145, 134, 0.3);
+    /* background-color: cadetblue transparent; */
+    /* background-color: transparent; */
     /* background-blend-mode:  */
+    /* opacity: 0.0 - 1.0; */
     color: white;
+    /* # zentrieren des textes im element */
+    text-align: center;
+    /* # zentrieren des elements auf der seite */
     align-items: center;
+    justify-content: center;
+/* # margin auto verteilt die h1 gleichmäßig in der mitte */
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10vh;
+
 }
