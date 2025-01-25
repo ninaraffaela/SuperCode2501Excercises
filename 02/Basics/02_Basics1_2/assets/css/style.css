@@ -1,4 +1,4 @@
-main{
+/* main{
     color: (101, 20, 20);
     text-align: center;
     font-size: 16px;
@@ -6,6 +6,23 @@ main{
     font-weight: lighter;
     background-color: lightgray;
     font-style: italic;
+} */
+
+h2{
+    text-align: center;
+    font-size: small;
 }
 
+h1{
+    text-align: center;
+    color: brown
+}
 
+h3{
+    background-color: rgb(197, 193, 193);
+    font-weight: bold;
+}
+
+span{
+    font-style: italic;
+}
