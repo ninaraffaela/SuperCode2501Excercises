@@ -1,29 +1,29 @@
 *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     
-
 }
-html{
+
+header{
     background-color: darkslategray
 }
 
-div{
+header div{
     color: lightslategray;
     font-size: 2rem;
 }
 
 main{
-    border: 2px solid darkslategray;
-    border-radius: 100px;
+    /* border: 2px solid darkslategray;
+    border-radius: 100px; */
 }
 
-footer{
-    text-align: right;
-    
 
-}
 
-footer li{
+li{
     color: lightslategray;
     font-size: 1rem;
+    text-align: right;
     
 }
