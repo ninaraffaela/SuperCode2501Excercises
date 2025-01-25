@@ -12,6 +12,9 @@ body{
     font-style: italic;
 } */
 
+nav{
+    background-color: lightslategray;
+}
 ul{
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
@@ -25,5 +28,10 @@ main section{
 }
 
 a{
+    color: lightseagreen;
+    text-decoration: none;
+}
+
+section p span{
     color: lightseagreen;
 }
