@@ -6,24 +6,68 @@
 }
 
 header{
-    background-color: darkslategray
+    background-color: rgb(62, 65, 65);
+    padding: 15px;
+    margin-bottom: 50px;
 }
 
 header div{
     color: lightslategray;
-    font-size: 2rem;
+    font-size: 1rem;
+}
+
+header div:nth-of-type(2){
+    color: lightslategray;
+    font-size: 1rem;
+    text-indent: 1%;
+    margin-bottom: 50px;
+}
+
+header article{
+    display: block;
+    /* align-items: center;
+    justify-content: center; */ 
+    width: 250px;
+    height: 150px;
+
+    /* # IRGENDWAS FEHLT HIER */
+    /* * nächste zeile erzeugt 3 farbigen Farbverlauf, warum nimmt er das nicht?*/ 
+    /* background-color: linear-gradient(top right, purple, blue, rgb(13, 160, 223)); */
+    background-image: linear-gradient(top right, purple, blue, teal);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+
+header article p{
+    /* * verwende ich um zwischen creative und fresh einen abstand zu haben */
+    margin-bottom: 5px;
+}
+
+header article h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    font-weight: lighter;
+}
+
+
+header li{
+    color: lightslategray;
+    font-size: 0.8rem;
+    text-align: right;
+    list-style: none;
+    margin-bottom: 10px;
 }
 
 main{
-    /* border: 2px solid darkslategray;
-    border-radius: 100px; */
+    margin-left: 50px;
 }
 
-
-
-li{
-    color: lightslategray;
-    font-size: 1rem;
-    text-align: right;
-    
+main h2{
+    word-spacing: 0.5rem;
 }
