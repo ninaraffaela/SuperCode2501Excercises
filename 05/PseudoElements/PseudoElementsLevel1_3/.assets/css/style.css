@@ -17,47 +17,49 @@ main {
 
 main ul li {
     color: black;
+    list-style: none;
 }
 
 /* ! Lists-style-image per class */
 
 /* 6x class für after - one each */
 .gym::after {
-    list-style-image: url(../icons/gym.png);
-    color: teal;
+    /* list-style-image: url("../icons/gym.png"); */
+    content: url("../icons/gym.png");
 }
+
 .bills::after {
-    list-style-image: url(../icons/bill.png);
+    content: url("../icons/bill.png");
 }
 
 .george::after {
-    list-style-image: url(../icons/dance.png);
+    content: url("../icons/dance.png");
 }
 
 .eggs::after {
-    list-style-image: url(../icons/eat.png);
+    content: url("../icons/eat.png");
 }
 
 .book::after {
-    list-style-image: url(../icons/book.png);
+    content: url("../icons/book.png");
 }
 
 .office::after {
-    list-style-image: url(../icons/organize.png);
+   content: url("../icons/organize.png");
 }
 
 
 /* 3x Status für vor dem Task */
 .done::before {
-    list-style-image: url(../icons/check.png);
+    content: url("../icons/check.png");
 }
 
 .doing::before {
-    list-style-image: url(../icons/doing.png);
+    content: url("../icons/doing.png");
 }
 
 .no::before {
-    list-style-image: url(../icons/no.png);
+    content: url("../icons/no.png");
 }
 
 .doing {

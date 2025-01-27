@@ -20,11 +20,15 @@ Aufzählungszeichen als Img einfügen recherchieren. geht noch nicht
 }
 geht nicht
 
+=> Researched:
 
+statt list-style-image nehmen wir content.......
 
-3. 
-wie kombiniere ich before und nth of type
-=> gleich classes verwenden?
+.gym::after {
+    /* list-style-image: url("../icons/gym.png"); */
+    content: url("../icons/gym.png");
+}
 
-stimmt das so mit der verwendung mehrerer classes pro element? mit leerzeichen aufgelistet?
+so gehts
+
 
