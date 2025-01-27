@@ -15,3 +15,6 @@ background-image: linear-gradient(direction, color-stop1, color-stop2, ...); )
 obwohl ich theoretisch weiß wie ich mehrfarbigen diagonalen Farbverlauf erzeuge, erscheint die box nicht. irgendwas fehlt. siehe roter comment in der css
 
 für den mouseOverHover der die Farbreihenfolge ändert, dann entsprechend den linear-gradient wiederverwenden, aber eben Farbe 1 und 3 getauscht
+
+
+/* * nächste zeile erzeugt 3 farbigen Farbverlauf, warum nimmt er das nicht?. DAS TO in to top right hat gefehlt

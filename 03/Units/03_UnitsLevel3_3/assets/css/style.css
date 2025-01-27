@@ -9,14 +9,20 @@ header{
     background-color: rgb(62, 65, 65);
     padding: 15px;
     margin-bottom: 50px;
+    
 }
 
-header div{
+header{
+   
+}
+
+/* ! AHAAAA. immer durch den pfad der elemente navigieren <3 */
+header section div{
     color: lightslategray;
     font-size: 1rem;
 }
 
-header div:nth-of-type(2){
+header section div:nth-of-type(2){
     color: lightslategray;
     font-size: 1rem;
     text-indent: 1%;
@@ -24,16 +30,19 @@ header div:nth-of-type(2){
 }
 
 header article{
-    display: block;
-    /* align-items: center;
-    justify-content: center; */ 
     width: 250px;
     height: 150px;
 
+
     /* # IRGENDWAS FEHLT HIER */
-    /* * nächste zeile erzeugt 3 farbigen Farbverlauf, warum nimmt er das nicht?*/ 
-    /* background-color: linear-gradient(top right, purple, blue, rgb(13, 160, 223)); */
-    background-image: linear-gradient(top right, purple, blue, teal);
+    /* * nächste zeile erzeugt 3 farbigen Farbverlauf, warum nimmt er das nicht?. DAS TO in to top right hat gefehlt*/ 
+    /* background: linear-gradient(top right, purple, blue, rgb(13, 160, 223));  */
+
+
+    /* #so gehts ;) */
+    background: linear-gradient(to top right, purple, blue, rgb(13, 160, 223)); 
+    /* background-image: linear-gradient(top right, purple, blue, teal);
+    /* background-color: teal; */
     border-radius: 15px;
     color: white;
     text-align: center;
