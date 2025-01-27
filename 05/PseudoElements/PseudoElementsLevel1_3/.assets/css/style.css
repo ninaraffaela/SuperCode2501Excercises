@@ -1,0 +1,65 @@
+header h1:first-letter {
+    color: #00796B;
+    font-size: 3em;
+}
+
+/* !hover über erstem buchstaben */
+header h1:hover:first-letter{
+    color: #4FC3F7;
+}
+
+main {
+    width: 50vw;
+    padding-left: 20px;
+}
+
+/* #Aufzählungszeichen als img recherchieren. nicht sichtbar*/
+
+main ul li {
+    color: black;
+}
+
+/* ! Lists-style-image per class */
+
+/* 6x class für after - one each */
+.gym::after {
+    list-style-image: url(../icons/gym.png);
+    color: teal;
+}
+.bills::after {
+    list-style-image: url(../icons/bill.png);
+}
+
+.george::after {
+    list-style-image: url(../icons/dance.png);
+}
+
+.eggs::after {
+    list-style-image: url(../icons/eat.png);
+}
+
+.book::after {
+    list-style-image: url(../icons/book.png);
+}
+
+.office::after {
+    list-style-image: url(../icons/organize.png);
+}
+
+
+/* 3x Status für vor dem Task */
+.done::before {
+    list-style-image: url(../icons/check.png);
+}
+
+.doing::before {
+    list-style-image: url(../icons/doing.png);
+}
+
+.no::before {
+    list-style-image: url(../icons/no.png);
+}
+
+.doing {
+    background-color: teal;
+}
