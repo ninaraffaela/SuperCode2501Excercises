@@ -1,28 +1,51 @@
+@font-face {
+    font-family: "Gilda Display";
+    src: url(../fonts/GildaDisplay/GildaDisplay.ttf);
+}
+
+@font-face {
+    font-family: "Maven";
+    src: url(../fonts/MavenPro/MavenPro.ttf);
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: solid 1px red;
+}
+
+:root {
+    --margin-bottom: 50px;
+}
+
+html {
+    /* font-size: clamp(1,5rem, 3vw, 10rem) */
 }
 
 header{
     background-color: rgb(62, 65, 65);
     padding: 15px;
-    margin-bottom: 50px;
+    /* height: 100vw; */
+    margin-bottom: var(--margin-bottom);
 }
 
 
 /* ! AHAAAA. immer durch den pfad der elemente navigieren <3 */
-header section div{
+header section p{
     color: lightslategray;
     font-size: 1rem;
+    font-family: "Maven", sans-serif;
+    
 }
 
-header section div:nth-of-type(2){
+duper{
     color: lightslategray;
     font-size: 1rem;
     text-indent: 1%;
-    margin-bottom: 50px;
+    margin-bottom: var(--margin-bottom);
 }
+
 
 header article{
     width: 250px;
@@ -51,6 +74,9 @@ header article{
     
 }
 
+header article:hover {
+    background: linear-gradient(to top right, rgb(13, 160, 223), blue, purple ); 
+}
 
 header article p{
     /* * verwende ich um zwischen creative und fresh einen abstand zu haben */
@@ -79,6 +105,7 @@ main{
 main section h2{
     word-spacing: 0.5rem;
     margin-top: -40px;
+    margin-bottom: var(--margin-bottom);
    
 }
 
@@ -91,8 +118,9 @@ main section p{
 }
 
 .hintergrund-text{
-    color: rgba(255, 160, 122, 0.4) ;
+    color: rgba(255, 160, 122, 0.2) ;
     text-transform: uppercase;
     font-size: 75px;
     
 }
+
