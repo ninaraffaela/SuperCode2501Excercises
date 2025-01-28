@@ -1,3 +1,3 @@
 bilder in ihren containern mit einer größe versehen.
 
-doch wieder die boxen
+nth 6 bleibt partout in einer eigenen zeile. warum?

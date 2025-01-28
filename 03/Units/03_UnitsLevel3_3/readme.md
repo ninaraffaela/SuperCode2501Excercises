@@ -1,3 +1,7 @@
+https://www.figma.com/design/OEd5we9PpuUukl5wKKvR1V/css_einfuehrung_units_level_3_3?node-id=2-2&t=fT5pN9ccJMMwUnLi-0
+
+
+
 MouseOver Farbwechsel vom background-color 
 
 linear gradient (diagonal
@@ -18,3 +22,6 @@ für den mouseOverHover der die Farbreihenfolge ändert, dann entsprechend den l
 
 
 /* * nächste zeile erzeugt 3 farbigen Farbverlauf, warum nimmt er das nicht?. DAS TO in to top right hat gefehlt
+
+aktueller Stand: nochmal komplett durchgehen. roots einfügen. variablen einfügen. classes einfügen. bilder einfügen
+texte zwischen bildern einfügen.

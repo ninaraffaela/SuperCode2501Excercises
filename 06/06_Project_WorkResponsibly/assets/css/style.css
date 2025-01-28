@@ -44,12 +44,28 @@ h1 {
     color: var(--text-teal);
 }
 
+/* ! header */
 
+header {
+    height: 
+}
 
 header section nav {
     font-weight: 400;
+    list-style: none;
 }
 
+header li {
+    list-style: none;
+}
+
+.socials {
+    text-align: right;
+}
+
+.socials:hover {
+    text-shadow: 5px 5px 5px 5px var(--text-grey);
+}
 
 /* ! Featured Resources */
 

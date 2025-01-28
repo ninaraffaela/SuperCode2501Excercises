@@ -9,7 +9,7 @@ body p::before {
 }
 
 body p::after {
-    content: "\2665";
+    /* content: "\2665"; */
     color: #FFCC00;
 }
 
