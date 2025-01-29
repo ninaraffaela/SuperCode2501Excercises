@@ -39,4 +39,9 @@ span {
 input[type=submit]{
     background: rgb(36, 158, 158);
     width: 300px;
+    color: white;
+}
+
+input[type=submit]:hover {
+    background: rgb(9, 64, 64);
 }
