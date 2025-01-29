@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormsLevel2_3</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Register form</legend>
+
+            <div class="labels">
+                <label for="name">Name</label><br>
+                <label for="surname">Surname</label><br>
+                <label for="email">Email</label><br>
+                <label for="gender">Gender</label><br>
+                <label for="picture">Picture</label><br>
+                <label for="country">Country</label><br>
+                <label for="pref-lan">Preferred languages</label><br>
+                <label for="act">Field of activity</label><br>
+            
+            </div>
+
+            <div class="inputs">
+                <input type="text" placeholder="Name" id="name">
+                <input type="text" placeholder="Surname" id="surname">
+                <input type="email" placeholder="Email" id="email">
+
+                <br>
+
+                <!-- radiobuttons -->
+                 <label for="male">Male</label>
+                <input type="radio" name="pref-lan" id="pref-lan" value="male">
+                <label for="female">Female</label>
+                <input type="radio" name="pref-lan" id="pref-lan" value="female">
+
+                <input type="file" id="picture">
+
+                <!-- countryselect -->
+                <select id="country">
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="USA">USA</option>
+                </select>
+
+                <!-- preferred languages. -->
+                 <!-- # what type of input is that? -->
+                <p>html</p>
+                <p>Css</p>
+                <p>JS</p>
+                <p>React</p>
+                <p>Angular</p>
+                <label class="hint" for="select">(To choose more than one use cmd key)</label>
+
+                <br>
+                
+                <!-- Checkboxen -->
+                 <input type="checkbox" id="act">
+                 <label for="checkbox">IT</label>
+
+                 <input type="checkbox" id="act">
+                 <label for="checkbox">Design</label>
+
+                 <input type="checkbox" id="act">
+                 <label for="checkbox">Other</label>
+
+        
+
+
+
+            </div>
+
+            <section class="Buttons">
+
+            <input type="submit" value="Send">
+            <input type="button" value="Cancel">
+            </section>
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>

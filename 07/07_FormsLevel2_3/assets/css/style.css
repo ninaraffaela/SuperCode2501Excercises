@@ -1,0 +1,19 @@
+fieldset {
+    /* display: inline; */
+}
+    
+div {
+    display: block;
+    width: 300px;
+}
+
+.inputs {
+    width: 300px;
+    /* padding-bottom: 30px; */
+}
+
+.hint   {
+    font-size:small
+}
+
+/* # how to put the 2 divs next to each other */
