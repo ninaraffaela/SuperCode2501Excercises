@@ -13,70 +13,52 @@
         <fieldset>
             <legend>Register form</legend>
 
-            <div class="labels">
-                <label for="name">Name</label><br>
-                <label for="surname">Surname</label><br>
-                <label for="email">Email</label><br>
-                <label for="gender">Gender</label><br>
-                <label for="picture">Picture</label><br>
-                <label for="country">Country</label><br>
-                <label for="pref-lan">Preferred languages</label><br>
-                <label for="act">Field of activity</label><br>
-            
-            </div>
+            <label class="ll" for="name">Name</label>
+            <input type="text" placeholder="Name" id="name"><br>
+    
+            <label class="ll" for="surname">Surname</label>
+            <input type="text" placeholder="Surname" id="surname"><br>
 
-            <div class="inputs">
-                <input type="text" placeholder="Name" id="name">
-                <input type="text" placeholder="Surname" id="surname">
-                <input type="email" placeholder="Email" id="email">
+            <label  class="ll"for="email">Email</label>
+            <input type="email" placeholder="Email" id="email"><br>
 
-                <br>
-
-                <!-- radiobuttons -->
-                 <label for="male">Male</label>
+            <label class="ll" for="gender">Gender</label>
+                <label class="labelright" for="male">Male</label>
                 <input type="radio" name="pref-lan" id="pref-lan" value="male">
-                <label for="female">Female</label>
-                <input type="radio" name="pref-lan" id="pref-lan" value="female">
+                <label class="labelright" for="female">Female</label>
+                <input type="radio" name="pref-lan" id="pref-lan" value="female"><br>
 
-                <input type="file" id="picture">
+            <label class="ll" for="picture">Picture</label>
+            <input type="file" id="picture"><br>
 
-                <!-- countryselect -->
-                <select id="country">
+            <label class="ll" for="country">Country</label>
+            <select id="country">
                     <option value="Germany">Germany</option>
                     <option value="France">France</option>
                     <option value="USA">USA</option>
-                </select>
-                <br>
+                </select><br>
 
-                <!-- preferred languages. -->
-                 <!-- - select with multiple -->
-                 <select id="country" multiple>
+            <label class="ll" for="pref-lan">Preferred languages</label>
+            <select id="country" multiple>
                     <option value="html">html</option>
                     <option value="Css">Css</option>
                     <option value="JS">JS</option>
                     <option value="React">React</option>
                     <option value="Angular">Angular</option>
-                </select>
-                <p>html</p>
-                <p>Css</p>
-                <p>JS</p>
-                <p>React</p>
-                <p>Angular</p>
-                <label class="hint" for="select">(To choose more than one use cmd key)</label>
+                    <label class="hint" for="select">(To choose more than one use cmd key)</label>
+                </select><br>
 
-                <br>
-                
-                <!-- Checkboxen -->
-                 <input type="checkbox" id="act">
-                 <label for="checkbox">IT</label>
+            <div class="checkbox-label"> 
+                <label class="ll" for="act">Field of activity</label>
+                <input type="checkbox" id="act">
+                 <label class="labelright" for="checkbox">IT</label>
 
                  <input type="checkbox" id="act">
-                 <label for="checkbox">Design</label>
+                 <label class="labelright" for="checkbox">Design</label>
 
                  <input type="checkbox" id="act">
-                 <label for="checkbox">Other</label>
-
-            </div>
+                 <label class="labelright" for="checkbox">Other</label><br>
+                </div>
 
             <section class="Buttons">
 

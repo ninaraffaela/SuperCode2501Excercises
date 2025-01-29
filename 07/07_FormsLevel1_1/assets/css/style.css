@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 label {
     display: block;
     margin: 20px 0 5px 0;
@@ -6,7 +12,8 @@ label {
 }
 
 form {
-    display: block;
+    /* display: block; */
+    margin-left: 20px;
     margin-bottom: 100px;
 }
 
@@ -16,21 +23,23 @@ body {
 
 input {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 input[type=text] {
-    width: 150px;
+    width: 148px;
+    display: inline-block;
 }
 
 
-input[type=email] {
+input[type=email],
+select ,
+.nameentry, 
+textarea {
     width: 300px;
 }
 
-select {
-    width: 300px;
-}
+
 
 span {
     color: red;
@@ -45,3 +54,4 @@ input[type=submit]{
 input[type=submit]:hover {
     background: rgb(9, 64, 64);
 }
+

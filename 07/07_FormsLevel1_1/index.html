@@ -9,9 +9,12 @@
 <body>
     <div>
     <form>
+    
         <label for="name">Name <span>*</span></label>
+        <div class="nameentry">
         <input type="text" id="name" placeholder="Vorname" required>
         <input type="text" id="name" placeholder="Nachname" required>
+    </div>
 
         <label for="email">E-Mail <span>*</span></label>
         <input type="email" id="email" required>
@@ -24,7 +27,7 @@
         </select>
 
         <label for="message">Nachricht <span>*</span></label>
-        <textarea cols="37" rows="10" id="message" required></textarea><br>
+        <textarea  id="message" required></textarea><br>
 
         <input type="submit" value="Submit">
 

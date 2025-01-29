@@ -1,16 +1,33 @@
-
-    
-div {
-    width: 300px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
 }
 
-.inputs {
-    width: 300px;
-    /* padding-bottom: 30px; */
+fieldset {
+    margin: 0 10px 0 10px;
+    /* display: inline-block; */
+    max-width: 100vw; 
 }
+
+.ll {
+    width: 30vw;
+    display: inline-block;
+}
+
+/* .gender {
+    width: 30vw;
+} */
 
 .hint   {
     font-size:small
 }
 
-/* # how to put the 2 divs next to each other */
+body form fieldset div .checkbox-label {
+    width: 0;
+}
+
+.labelright {
+    width: 0;
+}
+
