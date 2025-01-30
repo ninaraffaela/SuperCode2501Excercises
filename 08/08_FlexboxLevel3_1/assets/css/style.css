@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Railway";
+    font-family: "Raleway";
     src: url(../fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf);
 }
 
@@ -12,9 +12,10 @@
 }
 
 html {
-    font-family: "Railway";
+    font-family: "Raleway";
     font-size: 62.5%;
 }
+
 
 body {
     background-image: url(../img/wolke8.png);
@@ -60,42 +61,51 @@ header ul li a {
 /* ! Main area. flexbox in flexbox in flexbox */
 
 main {
-    font-family: "Railway";
+    font-family: "Raleway";
     color: white;
-    width: 80vw;
-    height: 95vh;
+    width: 500px;
+    height: 500px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* # warum nimmt er die  */
-h2 {
+.wrapper {
+    /* margin: 0 auto; */
+    /* padding: 0 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h2 {
+    color: white;
     font-weight: 400;
-    font-size: 5rem;
-    height: fit-content;
-    width: fit-content;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.wrapper p {
+    margin-bottom: 20px;
 }
 
 
-.main-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* # ich hätte erwartet, dass ich damit das p von den buttons entferne. padding oben unten */
-.button-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2px 0;
-}
-
-/* #warum nimmt er das nicht? */
-.buttons-only {
+main .buttons-only a{
+    text-decoration: none;
     text-transform: uppercase;
-    
+    font-weight: 700;
+    margin: 0 5px;
+    /* wie bekomm ich die buttons höher? */
 }
 
+main .buttons-only a:first-of-type {
+    background: white;
+
+}
+
+main .buttons-only a:nth-of-type(2) {
+    background: #745CF9;
+
+}
