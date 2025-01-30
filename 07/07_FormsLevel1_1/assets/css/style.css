@@ -34,12 +34,14 @@ input[type=text] {
 
 input[type=email],
 select ,
-.nameentry, 
-textarea {
+.nameentry {
     width: 300px;
 }
 
-
+textarea {
+    width: 300px;
+    height: 100px;
+}
 
 span {
     color: red;

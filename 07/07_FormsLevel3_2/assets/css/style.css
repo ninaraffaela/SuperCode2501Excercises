@@ -25,6 +25,11 @@ main h2 {
     text-align: center;
 }
 
+body main nav a {
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
 input {
     display: block;
     margin: 10px;
