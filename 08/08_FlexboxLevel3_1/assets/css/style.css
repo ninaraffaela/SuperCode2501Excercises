@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Railway";
+    src: url(../fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Railway";
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(../img/wolke8.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vh 0;
+    background-color: white;
+    color:dimgrey;
+}
+
+h1 {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+h1:hover,
+header ul li a:hover {
+    color: rgb(41, 41, 117);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 0 30px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+header ul li {
+    font-size: clamp(0.7rem, 1.5vw, 1.2rem)
+}
+
+header ul li a {
+    text-decoration: none;
+    color: dimgrey;
+}
+
+/* ! Main area. flexbox in flexbox in flexbox */
+
+main {
+    font-family: "Railway";
+    color: white;
+    width: 80vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* # warum nimmt er die  */
+h2 {
+    font-weight: 400;
+    font-size: 5rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.main-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* # ich hätte erwartet, dass ich damit das p von den buttons entferne. padding oben unten */
+.button-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 0;
+}
+
+/* #warum nimmt er das nicht? */
+.buttons-only {
+    text-transform: uppercase;
+    
+}
+
