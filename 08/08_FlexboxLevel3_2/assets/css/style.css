@@ -1,17 +1,26 @@
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
 * {
    padding: 0;
    margin: 0;
    box-sizing: border-box; 
 }
 
+html {
+    font-family: "Lato";
+}
+
 main {
+    /* width: 100vw; */
     background: #D9E8E5;
 }
 
 header {
     /* font-size: 2rem; */
     padding: 2vh 3vw;
-    background-color: thistle;
     display: flex;
     justify-content: space-between;
 }
@@ -29,12 +38,13 @@ header ul {
     align-items: center;
 }
 
+/* # ausrichtung der beiden rechts */
 header .nav-right {
     margin: auto;
 }
 
 /* # ich dachte mal wieder ich habs verstanden.... ^^ */
-.ring-container {
+/* .ring-container {
     width: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -46,5 +56,66 @@ header .nav-right {
     width: 100px;
     flex-wrap: wrap;
 }
+
+ */
+
+ /* ! Ring Container */
+
+ .flexcontainer {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+
+ .flexcontainer div {
+    font-size: 1rem;
+    height: 100px;
+    width: 200px;
+ }
+
+ /* # ich versteh´s nicht */
+ .r1 {
+    background-image: url(../img/ring001.png.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .r2 {
+    background-image: url(../img/ring002.png.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .r3 {
+    background: url(../img/ring003.png.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .r4 {
+    background: url(../img/ring004.png.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .r5 {
+    background: url(../img/ring005.png.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .r6 {
+    background: url(../img/ring006.png.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
 
 
