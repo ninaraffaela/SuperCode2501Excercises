@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Raleway";
+    font-size: 62.5%;
+}
+
+
+body {
+    background-image: url(../img/wolke8.png);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2vh 0;
+    background-color: white;
+    color:dimgrey;
+}
+
+h1 {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+h1:hover,
+header ul li a:hover {
+    color: rgb(41, 41, 117);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 0 30px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+header ul li {
+    font-size: clamp(0.7rem, 1.5vw, 1.2rem)
+}
+
+header ul li a {
+    text-decoration: none;
+    color: dimgrey;
+}
+
+/* ! Main area. flexbox in flexbox in flexbox */
+
+main {
+    font-family: "Raleway";
+    color: white;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    /* margin: 0 auto; */
+    /* padding: 0 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.wrapper p {
+    margin-bottom: 20px;
+}
+
+
+main .buttons-only a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 5px;
+    /* wie bekomm ich die buttons höher? */
+}
+
+main .buttons-only a:first-of-type {
+    background: white;
+
+}
+
+main .buttons-only a:nth-of-type(2) {
+    background: #745CF9;
+
+}

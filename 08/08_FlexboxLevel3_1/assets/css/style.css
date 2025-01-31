@@ -1,111 +1,384 @@
+/* ! Basic */
 @font-face {
     font-family: "Raleway";
     src: url(../fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf);
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid teal; */
+}
+
+:root {
+    --text-color: #8c979e;
+    --main-color: #745CF9;
+    /* # wichtig für responsivität */
+    --space-lr: 6vw;
+    --space-btm-sm: 60px;
+    --space-btm-big: 100px;
+}
+
+/* # wichtig für responsivität */
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none
 }
 
 html {
-    font-family: "Raleway";
-    font-size: 62.5%;
-}
-
-
-body {
-    background-image: url(../img/wolke8.png);
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-}
-
-header {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2vh 0;
-    background-color: white;
-    color:dimgrey;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 60px;
 }
 
-h1:hover,
-header ul li a:hover {
-    color: rgb(41, 41, 117);
+p {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--text-color);
 }
 
-header ul {
-    display: flex;
-    list-style: none;
-    gap: 0 30px;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-header ul li {
-    font-size: clamp(0.7rem, 1.5vw, 1.2rem)
-}
-
-header ul li a {
-    text-decoration: none;
-    color: dimgrey;
-}
-
-/* ! Main area. flexbox in flexbox in flexbox */
-
-main {
-    font-family: "Raleway";
+.btn-main {
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: 15px 30px;
     color: white;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.wrapper {
-    /* margin: 0 auto; */
-    /* padding: 0 1rem; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.wrapper h2 {
-    color: white;
-    font-weight: 400;
-    font-size: 3rem;
-    margin-bottom: 30px;
-}
-
-.wrapper p {
-    margin-bottom: 20px;
-}
-
-
-main .buttons-only a{
-    text-decoration: none;
     text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 5px;
-    /* wie bekomm ich die buttons höher? */
+    font-size: 12px; 
+    border: 2px solid var(--main-color);
 }
 
-main .buttons-only a:first-of-type {
-    background: white;
+.btn-border {
+    display: inline-block;
+    /* background-color: var(--main-color); */
+    border: 2px solid white;
+    padding: 15px 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size:12px; 
+}
+
+/* ! Header */
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    cursor: pointer;
+
+    display: none;
+}
+
+.burger div {
+    height: 5px;
+    width: 20px;
+    background-color: black;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 var(--space-lr);
+    height: 5%;
 
 }
 
-main .buttons-only a:nth-of-type(2) {
-    background: #745CF9;
+nav a {
+    padding: 10px 1.4vw;
+}
+
+header {
+    height: 100vh;
+}
+
+header article {
+    height: 95%;
+    background: url("../img/header_background_image.png") no-repeat center /cover ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header article h1 {
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+header article div {
+    margin: 0 var(--space-lr);
+}
+
+header article div p {
+    margin-bottom: 25px;
+}
+
+/* ! Main */
+
+main .l-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    padding: 30px var(--space-lr);
+    max-width: 1000px;
+    margin: auto;
+}
+
+.l-img img,
+.l-img div {
+    width: 50%;
+}
+
+.l-img div h3 {
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.l-img img {
+    object-fit: contain;
 
 }
+
+.l-img div p {
+    margin-bottom: 15px;
+}
+
+/* ! Parallax */
+
+.para {
+    height: 50vh;
+    /* # warum zieht er den nicht über die gesamte breite? */
+    background: url(../img/parallax.jpeg) no-repeat center /contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0 var(--space-lr);
+    color: white;
+/* hiermit erzeuge ich den parallax effekt. lieber in combi mit height */
+    background-attachment: fixed;
+
+    margin-bottom: 100px;
+}
+
+.para h3 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.para p {
+    margin-bottom: 15px;
+    /* color inherit zieht dann die farbe des elternelements */
+    color: inherit;
+}
+
+/* ! Limit */
+
+.limit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* margin-bottom: 50px; */
+
+}
+
+.limit div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.limit div h3 {
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+
+.limit div p {
+    padding: 0 var(--space-lr);
+    margin-bottom: 15px;
+    max-width: 80%;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+.limit div {
+    margin-bottom: 15px;
+}
+
+.limit img {
+    max-width: 80%;
+}
+
+
+/* ! Projects */
+
+.proj {
+    /* # ich brauche hier eine bessere höhe für den schwarzen bereich */
+    /* height: 700px; */
+
+    background-color: black;
+    padding: var(--space-btm-sm) 0;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.proj h3,
+.proj p {
+    color: white;
+    margin-bottom: 15px;
+}
+
+    /* ! gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.gallery img {
+    padding: 20px 0;
+    /* *wegen dem scrollbalken sind 25vw ≠ 25% */
+    /* width: 23vw; */
+    width: 25%;
+}
+
+
+/* ! Customers */
+
+.customers {
+    background: url(../img/header_background_image.png) no-repeat center /cover;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 15px var(--space-lr);
+}
+
+.customers h3,
+.customers p {
+    color: white;
+    padding: 15px 0;
+}
+
+
+/* ! Clients */
+
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px var(--space-lr);
+    margin-bottom: 50px;
+}
+
+.clients div  {
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.clients h3 {
+    padding: 15px 0;
+}
+
+
+/* ! like */
+/* # ich krieg die nicht nebeneinander. */
+.like {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    /* text-align: center; */
+    /* text-justify: center; */
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ! Media Query */
+
+/*  */
+/* handy 550px oder kleiner (max-width)*/
+/* Tablet 800px oder kleiner (max-width) */
+
+/* * Mobile First */
+/* Wenn ich mit obile first anfange benutze ich (min-width) statt max-width. 
+vom kleinen zum großen arbeiten */
+
+/* - screen für Bildschirme Handy PC Tablet */
+/* - print: für drucker, beim drucken der seite */
+/* - spreech: für screenreader und sprachausgabegeräte */
+
+@media screen and (max-width: 800px) {
+    .burger {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .l-img {
+        flex-direction: column;
+    }
+
+    .l-img img,
+    .l-img div {
+        width: 100%;
+        text-align: center
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header article h1,
+    .para h3 {
+        font-size: 30px;
+    }
+}
+/* * Handy im Querformat */
+@media screen and (max-width: 500px) and (orientation: landscape) {
+
+}
+
+/* * Für Dark Light Modus */
+/* dark für dunkel und light für hell */
+/* kann auch in den dev-tools des browsers über das pinsel-symbol */
+@media  (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(55, 54, 54);
+}
+}
+
+
