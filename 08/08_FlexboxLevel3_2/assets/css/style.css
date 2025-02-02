@@ -13,6 +13,10 @@ html {
     font-family: "Lato";
 }
 
+img {
+    max-width: 100%;
+}
+
 main {
     /* width: 100vw; */
     background: #D9E8E5;
@@ -60,62 +64,58 @@ header .nav-right {
  */
 
  /* ! Ring Container */
+.ringe {
+    padding: 50px 0 0 20px;
+}
 
  .flexcontainer {
     height: 500px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
  }
 
  .flexcontainer div {
     font-size: 1rem;
-    height: 100px;
-    width: 200px;
- }
-
- /* # ich versteh´s nicht */
- .r1 {
-    background-image: url(../img/ring001.png.jpg);
+    height: 230px;
+    width: 340px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 0 15px 15px 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+ }
+
+
+ .r1 {
+    background-image: url(../img/ring001.png.jpg);
  }
 
  .r2 {
     background-image: url(../img/ring002.png.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
  }
 
  .r3 {
     background: url(../img/ring003.png.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
  }
 
  .r4 {
     background: url(../img/ring004.png.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
  }
 
  .r5 {
     background: url(../img/ring005.png.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
  }
 
  .r6 {
     background: url(../img/ring006.png.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
  }
 
 
