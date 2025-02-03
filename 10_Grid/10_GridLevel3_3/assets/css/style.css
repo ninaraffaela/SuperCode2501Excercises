@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Como";
+    src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+    font-family: "ComoBold";
+    src: url(../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: gainsboro;
+    font-size: 62.5%;
+}
+
+:root {
+    --text: 1.6rem;
+    --h2: 3.5rem;
+    --h3: 2.4rem;  
+    --sponsor: rgb(55, 54, 54);
+    --font: "Como";
+    --fontbold: "ComoBold";
+}
+
+h1 {
+    font-family: var(--font), Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ! H1 and Issue */
+
+/* # missing: first letter from News */
+h1::first-letter {
+    font-size: 4.5rem;
+} 
+
+
+header .issue{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: solid var(--sponsor) 5px;
+    border-bottom: var(--sponsor) solid 5px;
+    margin-bottom: 3rem;
+}
+
+header .issue p {
+    padding: 0.5rem 0;
+    color: var(--sponsor);
+    font-family: var(--font);
+    text-transform: uppercase;
+    font-size: var(--text);
+
+}
+
+
+/* ! Main -articles + sponsor */
+/* * hiermit wird der article bereich vom sponsoren bereich getrennt */
+main {
+    min-height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 4fr 1fr;
+}
+
+main .hl-articles-img {
+    grid-column: 1 / 2;
+/* grid-column weil es ein kind ist. display: grid weil es auch ein parent ist */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+main .hl-articles-img h2{
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--font);
+    font-size: var(--h2);
+}
+
+main .hl-articles-img .article-img {
+    grid-column: 
+}
+
+
+main .sponsors {
+    grid-column: 2 /3;
+}
+
