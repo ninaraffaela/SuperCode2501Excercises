@@ -1,0 +1,160 @@
+div {
+    color: white;
+    font-size: 20px;
+}
+
+
+/* ! odd and even */
+div:nth-child(odd) {
+    background-color: seagreen;
+}
+
+div:nth-child(even) {
+    background-color: salmon;
+}
+
+/* ! Grid legt ein Grid über die Area */
+/* * Columns sind Horizontal (li-re) */
+/* * Rows sind vertikal (up-dw) */
+/* * New Unit Grid only => fr = fraction */
+/* * 1fr = 1 Fraction */
+/* * 2fr = double 1 fraction */
+
+
+/* #  ==== GRID Version 1 ==== */
+
+
+/* ! Parent Element */
+
+.grid-parent {
+    background-color: blanchedalmond;
+    min-height: 100vh;
+
+    display: grid;
+
+    /* ! Define COLUMNS */
+
+    /* * long version */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 200px 1fr 1fr 2fr; */
+
+    /* * short version */
+    grid-template-columns: repeat(4, 1fr);
+    /* # beide aktiven zeilen machen das gleiche*/
+
+
+    
+    /* ! Define ROWS */
+    /* grid-template-rows: repeat(5, 1fr); */
+    /* grid-template-rows: 100px 50px 400px; */
+    /* # Rows are added automatically. so rather not use a fixed height. */
+    
+
+
+    /* ! GAP */
+    /* * Gap oben unten */
+    /* row-gap: 5px; */
+
+    /* * Gap links rechts */
+    /* column-gap: 20px; */
+
+    /* * Gap everywhere */
+    gap: 10px;
+
+
+    /* ! parent definition finished */
+}
+
+
+
+
+/* ! Style the child */
+section .box1 {
+    background-color: red;
+
+    /* * bis zu welcher gap soll das element gehen */
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    /* * Kurzschreibform (*/
+    grid-column: 1/5;
+
+    /* * ❤️‍🔥 Anordnung mit Kästchen zählen (ohne gaps) */
+    grid-column: 1 / span 4;
+    /* # alle 3 schreibweisen oben drüber machen das gleiche  wenn der parent 4fr width hat*/
+
+
+    /* * Element über ganze columnWidth */
+    grid-column: 1/-1;
+
+
+
+    /* ! Align- / Justify self  */
+    /* * DefaultWert ist auf stretch */
+    align-self: stretch;
+    justify-self: stretch;
+
+    /* * Damit verschwindet die background-color */
+    /* align-self: center; */
+    /* justify-self: center; */
+
+    /* ! Flex im Grid */
+    /* * Damit bleibt die background-color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 
+section .box2 {
+    /* * sidebar left einzufügen */
+    /* background-color: teal; */
+    /* grid-column: 1 / 2; */
+    /* grid-row: 2 /5; */ 
+
+
+
+
+
+hr {
+    margin: 100px 0;
+}
+
+
+/* #  ==== GRID Version 2 ==== */
+
+/* ! Grid Areas for the parent*/
+
+.grid-area {
+    /* * Mit grid Template Areas können wir felder beschriften */
+    
+    display: grid;
+    gap: 5px;
+
+    grid-template-areas: 
+        "logo nav nav nav"
+        "main main main aside"
+        "footer footer footer footer"
+        ;
+}
+
+/* ! Grid Area for the child */
+    /* * Um grid-area zu verwenden muss im parent grid-template-areas verwendet werden. */
+    /* * Grid-area sagt den children in welchem feld sie sitzen */
+    section .boxa {
+    background-color: olive;
+    grid-area: nav;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .grid-parent {
+        grid-template-columns: repeat (2, 1fr);
+    }
+
+    section .box1 {
+        grid-column: 1/-1;
+    }
+}
