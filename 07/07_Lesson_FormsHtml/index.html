@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <p>Welche gibt es?</p>
+
+    <!-- ! Text -->
+     <!-- Every Input can have a label. I have to marry them, by naming them the same -->
+    <label for="firstname">Text:</label>
+    <input id="firstname" type="text" />
+
+
+    <!-- ! FormulaTag put >2 zu gruppieren. FormElement kann dann mit Enter benutzt werden -->
+    <!-- <form>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </form> -->
+
+   
+       <!-- ! Number -->
+     <form>
+     <label for="num">Number:</label>
+     <input id="num" type="number">
+    
+
+    
+     <!-- ! NumberPicker -->
+        <label for="num2">NumberPicker:</label>
+        <input id="num2" type="number" min="0" max="10">
+       
+   
+       <!-- ! Tel -->
+    <label for="tel">Tel:</label>
+    <input type="tel" id="tel">
+
+       <!-- ! Email -->
+       <label for="mail">E-Mail:</label>
+       <input type="email" id="mail">
+
+       <hr>
+       <!-- ! Radiobutton -->
+        <!-- <div>
+            <label>Was machst du am liebsten?</label>
+
+            <input id="html" type="radio">
+            <label for="html">HTML</label>
+
+            <input id="css" type="radio">
+            <label for="css">CSS</label>
+
+            <input id="ts" type="radio">
+            <label for="ts">TS</label>
+        </div> -->
+   <!-- So hätte ich alle RadioButtons checken können. Radio sollte aber eher auf eine Option gehen. -->
+    
+
+   <!-- * combine radiobuttons with giving them the new name -->
+    <!-- * checked for the prefered default option -->
+     <!-- * values to kinda name the input option -->
+   <div>
+    <label>Was machst du am liebsten?</label>
+
+    <input id="html" type="radio" name="fav-lan" checked value="html">
+    <label for="html">HTML</label>
+
+    <input id="css" type="radio" name="fav-lan" value="css">
+    <label for="css">CSS</label>
+
+    <input id="ts" type="radio" name="fav-lan" value="typescript">
+    <label for="ts">TS</label>
+</div>
+<hr>
+
+<!-- ! Checkbox -->
+ <label for="cbhappy">Happy?</label>
+ <input type="checkbox" id="cbhappy">
+
+ <label for="cbshappy">Super Duper Happy?</label>
+ <input type="checkbox" id="cbshappy">
+
+    <hr>
+    <!-- ! Date mit Datepicker -->
+    <label for="date">Date mit Datepicker:</label>
+    <input type="date" id="date">
+
+     <!-- ! Passwort -->
+    <label for="pw">Password</label>
+    <input type="password" id="pw">
+
+    <!-- ! File -->
+    <label for="file">File</label>
+    <input type="file" id="file">
+
+    <!-- ! Range -->
+     <!--* for und id optional. has no real value -->
+     <label for="range">Range</label>
+     <input type="range" min="0" max="50" step="10" id="range">
+    <br>
+    <!-- ! Button -->
+    <input type="button" value="go">
+     <button>go2</button>
+     <!-- * button löst page refresh aus -->
+    <br>
+
+    <!--! TextArea -->
+    <label for="textarea">Textarea</label>
+    <textarea cols="30" rows="10" id="textarea"></textarea>
+
+    <hr>
+
+    <!--  ! Select & Option -->
+      <!-- *kann nur eines auswählen -->
+       <!-- * same functionality like radio -->
+        <!-- * Value benötigt -->
+    <label for="sele">Vorwahlen</label>
+    <select name="" id="">
+
+        <option value="+49">+49</option>
+        <option value="+39">+39</option>
+        <option value="+1">+1</option>
+    </select>
+
+    <!-- ! Submit -->
+     <!-- * kann nur innerhalb eines form tags -->
+      <!-- * über das value kann ich den text ändern -->
+     <form>
+    <input type="submit" value="let´s go">
+</form>
+
+<!-- ! Placeholder -->
+ <input type="text" placeholder="Vorname eintragen">
+
+ <!-- ! Disabled -->
+  <!-- * Vorsicht, man kann disabled mit devtools umgehen -->
+  <label for="dis">Disabled</label>
+  <input id="dis" type="text" disabled>
+
+  <button disabled>go</button>
+
+
+  <!-- ! required -->
+   <!-- * Pflichtfeld -->
+    <!-- * Vorsicht, man kann required auch über devTools umgehen -->
+    <form >
+        <label for="req">Required:</label>
+        <input type="text" id="req" required>
+        <input type="submit">
+    </form>
+
+<!-- ! more input -->
+ <input type="datetime-local">
+ <input type="time">
+ <input type="color">
+ <input type="hidden">
+<input type="search">
+
+
+</body>
+</html>

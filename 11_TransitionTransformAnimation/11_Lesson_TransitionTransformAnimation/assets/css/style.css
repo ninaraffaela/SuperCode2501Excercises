@@ -1,0 +1,263 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    margin: 50px 0;
+}
+    
+
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: teal;
+    border-radius: 20px;
+    margin: 50px auto 100px auto;
+    cursor: pointer;
+
+
+/* # TRANSITION */
+
+/* * WICHTIG: transition into the mainelement, so you also have a reverse transition when the hover ends. */
+/* 1. Was soll animiert werden? (all or background-color) */
+/* 2. wie lange soll die transition gehen? (required) */
+/* 3. wie lange soll verzögert werden? (2s) */
+/* 4. wie soll die animation verlaufen? */
+
+transition: all 0.5s 0s;
+
+
+}
+
+/* .box:hover {
+    transform: translateX(60px);
+    background-color: aquamarine;
+    border: 5px solid teal;
+    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+} */
+
+/* # Transform */
+
+
+.box:hover {
+    /* ! Translate */
+    /* * ❤️‍🔥 Verschiebt das Element auf der x-achse */
+    transform: translateX(50px);
+
+     /* * ❤️‍🔥 Verschiebt das Element auf der y-achse */
+     transform: translatey(50px);
+
+      /* * ❤️‍🔥 Verschiebt das Element auf der x-achse */
+    transform: translate(50px, 50px);
+
+
+    /* ! Rotate */
+    /* * animiert spiegelung x-achse why??*/
+    transform: rotateY(180deg);
+
+    /* * animiert spiegelung y-achse why?? */
+    transform: rotatex(180deg);
+
+    /* * ❤️‍🔥 animiert drehung um eigene achse */
+    transform: rotate(180deg);
+
+
+    /* ! Scale */
+    /* *❤️‍🔥 animiert die Höhe und breite (1.1 => minimal größer, 2 => 2x so groß) */
+    transform: scale(1.1);
+    
+    /* * streckung in der x-achse */
+    transform: scaleX(2);
+
+    /* * streckung in der y-achse */
+    transform: scaleY(2);
+
+    /* ! Skew */
+    /* * streckt die ecken */
+    transform: skew(-20deg, -20deg);
+
+
+    /* ! Kombinierte Animationen */
+    /* * wäre fast eine Karte die du umdrehst */
+    transform: translate(50px, 50px) rotate(180deg) skew(-20deg, -20deg) scale(1.5) rotatey(180deg);
+
+
+    /* ! Transform Origin */
+    /* * Hiermit kann ich die "Pinnadel" versetzen. Default center */
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+
+ 
+    
+
+}
+
+
+/* # === Animation === */
+
+.drehen {
+    margin: auto;
+    background: cornflowerblue;
+    height: 150px;
+    width: 150px;
+
+
+/* * 1. Mit animation rufe ich den Namen der Animation auf */
+/* * 2. divDrehen = name */
+/* * 3. 1s = wie lange soll die animation dauern */
+/* * 4. linear = animationsverlauf */
+/* * 5. infinite = wie oft soll die animation abgespielt werden (num) */
+/* * 6. normal =  animationsrichtung (normal, alternate (backforth if more than 2 or infinite), forwards (bleibt am endpunkt)) */
+/* * 7. 0.5s = verzögerung */
+    animation: divDrehen 5s linear 2 alternate 0.5s;
+    /* animation: divDrehen 5s linear 3 alternate-reverse 0.5s; */
+    /* animation: divDrehen 5s linear 3 forwards 0.5s; */
+    /* animation: divDrehen 5s linear 3 normal 0.5s; */
+
+}
+
+/* ! Animation mit KEYFRAME definieren */
+/* * 2 optionen ein Keyframe zu schreiben. "from to" und "-1%-100%" */
+/* * from to --> benutzen wir für primitive animationen */
+/* * 1% - 100% --> für komplexe animationen */
+
+@keyframes divDrehen {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(300deg);
+        background-color: blueviolet;
+    }
+    
+}
+
+/* ! Big and Small  */
+
+h1 {
+    text-align: center;
+    animation: scaleBig 2s linear 1;
+
+}
+
+@keyframes scaleBig {
+    0% {
+        transform: scale(1);
+
+    }
+
+    25% {
+        transform: scale(2);
+        color: teal;
+    }
+
+    50% {
+        transform: scale(0.5);
+        color: blueviolet;
+    }
+
+    75% {
+        transform: scale(3);
+        color: pink;
+        border: 2px solid teal;
+
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+/* ! Ball Animation */
+
+.animation {
+    background-color: bisque;
+    height: 500px;
+    width: 500px;
+}
+
+.animation article {
+    /* Hier benutzen wir % damit die hälfte des parents, dieser article ist */
+    height: 50%;
+    width: 50%;
+    background-color: teal;
+    border-radius: 50%;
+
+    animation: move 5s 2;
+}
+
+@keyframes move {
+    0%,
+    100% {
+        background-color: aquamarine;
+    }
+
+    25% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translate(100%, 100%)
+    }
+
+    75% {
+        transform: translateX(100%);
+        background-color: teal;
+    }
+
+    100% {
+        background-color: cornflowerblue;
+    }
+}
+
+
+/* ! LoaderAnimation Balls */
+.loading {
+    background: rgb(233, 143, 129);
+    height: 500px;
+    width: 100%;
+}
+
+.loading div {
+    background-color: aquamarine;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+
+    animation: loadervonnina 3s 2;
+}
+
+@keyframes loadervonnina {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px) scale(1.1);
+        background-color: rgb(36, 182, 133);
+    }
+    
+}
+
+.loading div:nth-of-type(1) {
+    animation: loadervonnina 2s infinite ease-in-out;
+}
+
+.loading div:nth-of-type(2) {
+    animation: loadervonnina 2s infinite ease-in-out .2s;
+}
+
+.loading div:nth-of-type(3) {
+    animation: loadervonnina 2s infinite ease-in-out .4s;
+}
+
+.loading div:nth-of-type(4) {
+    animation: loadervonnina 2s infinite ease-in-out .6s;
+}
+

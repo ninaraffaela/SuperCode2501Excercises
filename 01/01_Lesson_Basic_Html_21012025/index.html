@@ -1,0 +1,131 @@
+<!-- mit cmd shift und 7 macht man einen kommentar -->
+<!-- better comments: * orange  # rot ! blau - lila -->
+
+
+<!DOCTYPE html>
+<!-- Der lang tag sagt uns, welche Sprache der Content hat-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Hier sagen wir, dass der content immer so breit ist wie der browser-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Das ist der Titel von unserer Seite -->
+    <title>HTML Basic</title>
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Hier Zeige ich die Basics von Html">
+
+</head>
+
+<!-- In unseren body kommt der Content rein -->
+<body>
+    <header>
+        <nav>
+            <a href="">Home</a>
+            <!--* Das ist ein relativer Pfad. mit "./" navigieren wir einen Ordner rein -->
+             <a href="./about/about.html">About</a>
+            <a href="">Contact</a>
+            <!-- *Das ist ein statischer Pfad -->
+            <a target="_blank" href="https://www.apple.com/de/">Apple</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+           <!--! Überschriften in Html h1-h6 -->
+        <h1>Titel h1</h1>
+        <h2>Titel h2</h2>
+        <h3>Titel h3</h3>
+        <h4>Titel h4</h4>
+        <h5>Titel h5</h5>
+        <h6>Titel h6</h6>
+
+        <!-- ich sollte nur eine h1 pro Seite benutzen. ich muss h2-h6 NICHT nach der Reihe verwenden--> 
+        <h1>Hier gibt es Kaffeemaschinen zu kaufen</h1>
+        </section>
+
+        <hr>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum natus tenetur quam modi placeat amet tempora facere, in soluta repellendus accusamus, nulla ad expedita. Corrupti eos incidunt dolore beatae dolorum.</p>
+                <!-- Das benutzen wir für lange Texte -->
+
+        <section>
+            <!-- ! Listen in HTML -->
+        <!-- - ul => unordered List -->
+        <!-- - ol => ordered List -->
+        <!-- - li => listed items -->
+         <h4>Ungeordnete Liste</h4>    
+         <ul>
+            <li>Nina</li>
+            <li>MØ</li>
+         </ul>
+
+         <h4>Geordnete Liste</h4>
+         <ol>
+            <li>Nina</li>
+            <li>MØ</li>
+         </ol>
+
+
+        </section>
+
+
+        <!-- !Bilder in HTML -->
+         <section>
+            <!-- *Absoluter Pfad -->
+            <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcS_VTYN-YThFy3ywvAeplOtQ0U5-uzPI_xhQvkFnmYrDERwHJIrtCOpD5U6Haj8k8Obt0DwR_eaNMKYTmhJTSE" alt="Ein Foto von einem Hund" width="500" height="600"/>
+
+            <!-- * Dynamischer Pfad -->
+             <img src="./assets/getimgai-ki-bilder.jpg"  alt="Hundefoto">
+         </section>
+
+         <hr />
+         <!-- ! Block vs inline Elemente -->
+         <!--! Ein InlineElement ist nur so breit wie es lang ist. reihen sich aneinander soweit Platz ist, dann Umbruch -->
+
+          <h2>Inline vs. Block Elemente</h2>
+          <h3>Bsp. für BlockElemente</h2>
+
+          <h4>BlockElemente</h4>
+          <ul>
+            <li>Aside</li>
+            <li>p</li>
+            <li>figure</li>
+            <li>article</li>
+            <li>fieldset</li>
+            <li>form</li>
+            <li>hr</li>
+            <li>nav</li>
+            <li>Section</li>
+            <li>main</li>
+            <li>header /footer</li>
+            <li>h1-h6</li>
+            <li>ul und ol</li>
+            <li>li</li>
+            <li>div</li>
+          </ul>
+
+          <h4>InlineElemente</h4>
+          <ul>
+            <li>a</li>
+            <li>Button</li>
+            <li>img</li>
+            <li>b</li>
+            <li>em</li>
+            <li>input</li>
+            <li>label</li>
+            <li>span</li>
+            <li>textarea</li>
+            <li>script</li>
+          </ul>
+
+
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+body{
+    background-color: rgb(112, 176, 161);
+}
+
+header{
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+
+main{
+    background-color: bisque;
+    border-radius: 10px;
+
+}
+
+a{
+    color: teal;
+    text-decoration: none;
+}
+
+header h2{
+    background-color: blueviolet;
+}
+
+header h2{
+    background-color: blueviolet;
+    font-size: 40px;
+    text-decoration: underline;
+    font-weight: lighter;
+    /* so kann ich Block Elemente und InlineElemente wechseln */
+    display: inline;
+
+}
+
+ol{
+    background-color: hotpink;
+}
+
+ul{
+    background-color: teal;
+}
+
+footer{
+    background-color: red;
+}
+
+footer ul{
+    background-color: green;
+}
+
+footer section h4{
+    color: rgb(200, 34, 156);
+}
+
+footer h4{
+    background-color: bisque;
+}
+
+
+/* ! Pseudo Selectors */
+
+/* je höher die zahlen, desto selektorspezifischer ist der befehl */
+
+aside li{
+    color: red;
+}
+
+aside li:last-child{
+    color: blue;
+}
+
+aside li:first-child{
+    color: purple;
+
+}
+
+main h3:last-of-type{
+    background-color: green;
+}
+
+/* damit style ich das dritte element des typs aside li */
+aside li:nth-of-type(3){
+    background-color: aquamarine;
+}
+
+/* ! Hintergrund Fotos */
+
+footer article{
+    background-color: yellow;
+    height: 300px;
+
+    /* background-image: url(../img/fairytree.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+
+    /* Kurzschreibform */
+    background: url(../img/fairytree.avif) no-repeat center/cover;
+
+    background-size: cover;
+}
+
+footer article div {
+
+    background-color: red;
+}
+
+footer article div h3{
+    /* objekte zentrieren mit hilfe von mrgin auto */
+    width: 50px;
+    margin: auto;
+    /* objekte zentrieren mit hilfe von textaline */
+    text-align: center;
+}

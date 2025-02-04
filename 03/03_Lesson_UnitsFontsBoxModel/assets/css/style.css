@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Lobster";
+    src: url("../fonts/Lobster_Two/LobsterTwo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../fonts/Oswald/static/Oswald-Regular.ttf");
+}
+
+/* ! oben die Fonts einbinden.  drunter die Globalen Werte. mit "*" die DefaultWerte überschreiben.   */
+
+/* ! Sternselektor spricht jedes Element im HTML an (section, p, h1, a,...... */
+/* ! überschreibt die defaultwerte und gibt dir eine leere Seite */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* # Hiermit können wir schneller einen horizontal-scroll finden */
+    /* border: 1px solid red; */
+}
+
+html{
+    font-size: 10px;
+    /* font-size: 62.5% */
+    font-family: "Lobster", sans-serif
+}
+
+
+h1{
+    font-family: "Lobster", sans-serif;
+    background-color: antiquewhite;
+    margin-bottom: 30px;
+    font-size: clamp(1.5rem 3vw 7rem)
+}
+
+p{
+    font-family: "Oswald", sans-serif;
+    /* font-size: 25px; */
+    /* font-weight: bold;
+    text-decoration: line-through 3px solid green;
+    text-decoration: underline teal; */
+    color: blueviolet;
+    font-style: italic;
+    hyphens: auto; 
+}
+
+/* ! Box-Model */
+
+article p{
+    display: inline-block;
+    width: 300px;
+    border: solid 25px teal;
+    /* padding: 20px; */
+    /* margin-top: 50px; */
+    /* margin-left: 30px; */
+    /* margin-bottom: 30px; */
+    /* margin-right: 60px; */
+    /* margin: 50px 100px; */
+
+    /* padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+    padding-left: 20px; */
+
+    /* padding: 10px 40px 70px 20px; */
+    padding: 50px 10px;
+
+}
+
+/* ! display. inline-block/Inline/block */
+
+a{
+    display: inline-block;
+    background-color: violet;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 100px;
+
+}
+
+/* ! Units */
+
+section{
+    background-color: beige;
+    margin-bottom: 200px;
+    /* width: 50vm; */
+    /* height: 50vh; */
+}
+
+p{
+    margin-bottom: 30px;
+}
+/* ? rem */
+section h2{
+    font-size: 1rem
+}
+
+/* ? vw + vh . viewportWidth and ViewportHeight*/
+section p:nth-of-type(1){
+    background-color: rgb(75, 202, 202);
+    height: 100vh;
+    width: 50vw;
+}
+
+/* ? % */
+section p:nth-of-type(2){
+    color: white;
+    background-color: rgb(21, 119, 119);
+    width: 80%;
+}
+
+/* ? em (orientiert sich an der Schriftgröße des Parents) */
+section p:nth-of-type(3){
+    color: white;
+    background-color: rgb(94, 87, 186);
+    width: 80em;
+}
+
+/* ? Pixel (orientiert sich an der Schriftgröße des Parents) */
+section p:nth-of-type(4){
+    color: white;
+    background-color: rgb(216, 152, 41);
+    width: 100px;
+    height: 30px;
+}
+
+/* ! Wir wollen keinen HorizontalScrollbalken */

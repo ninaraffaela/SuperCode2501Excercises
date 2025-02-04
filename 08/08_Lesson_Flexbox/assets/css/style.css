@@ -1,0 +1,221 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ! Flex aktivieren */
+.flexContainer {
+    display:flex;
+
+    background-color: bisque;
+    height: 600px;
+
+    /* align-content: flex-start; */
+
+    /* ! horizontale ausrichtung */
+    /* justify-content: center; */
+    /* justify-content: end; */
+    /* justify-content: start; */
+    /* justify-content:space-around; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    /* *space evenly teilt den platz zwischen den elementen evenly auf. unterschied zu space around: rechts links dazwischen abweichend.  */
+
+    /* ! vertikale ausrichtung */
+    align-items: center;
+    /* align-items: end; */
+    /* align-items: start; */
+
+
+    /* ! FlexDirection */
+    /* flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-direction: row; */
+
+    /* ! flex wrap */
+    /* * elemente rutschen in die nächste spalte oder reihe mit wrap. default no wrap */
+    /* flex-wrap: wrap; */
+
+    /* ! gap */
+    /* * Abstände zwischen den elementen */
+    /* gap: 20px 40px; */
+
+}
+
+.flexContainer div {
+    font-size: 2rem;
+    height: 100px;
+    width: 100px;
+    /* * align-self: verwenden falls keine höhe vorhanden ist und default stretch nicht gewollt ist */
+}
+
+
+
+
+
+/* ! so könnte man die einzelnen elemente anders ausrichten. default wäre stretch. */
+/* .red {
+    background-color: red;
+    align-self: center;
+}
+
+.yellow {
+    background-color: yellow;
+    align-self: end;
+}
+
+.blue {
+    background-color: blue;
+    align-self: start;
+  }
+  
+  .purple {
+    background-color: purple;
+    align-self: center;
+} */
+
+
+/* ! Order */
+/* *wenn nur eine box eine order bekommt, rutscht sie nach hinten. default order 0 für alle. stehen also weiter vorne. */
+
+/* .red {
+    background-color: red;
+    order: 2;
+    height: 200px;
+}
+
+.yellow {
+    background-color: yellow;
+    order: 1;
+}
+
+.blue {
+    background-color: blue;
+  }
+  
+  .purple {
+    background-color: purple;
+    order: 3
+} */
+
+/* ! boxen normal */
+/* .red {
+    background-color: red;
+    height: 200px;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+  }
+  
+  .purple {
+    background-color: purple;
+} */
+
+
+/* ! header + nav */
+header article img {
+    width: 80px;   
+}
+
+header {
+    padding: 2vh 3vw;
+    background-color: thistle;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    /* margin-bottom: 100px; */
+}
+
+header article {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 0 30px;
+    align-items: center;
+
+}
+
+/* ! Card */
+
+.cards-wrapper {
+    background-color: grey;
+    padding: 10vh 0;
+}
+
+
+.single-card {
+    background-color: rgb(95, 92, 92);
+    color: white;
+    width: 40vw;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.single-card-text {
+    margin-bottom: 15%;
+}
+
+.single-card-text h3 {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    margin-bottom: 5%;
+}
+
+.single-card-text p {
+    font-size: clamp(.8rem, 1.8vw, 1.5rem)
+}
+
+.single-card-text a {
+    color: orangered;
+}
+.properties {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    margin-bottom: 10%;
+}
+
+.single-propertie {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    background-color: rgb(54, 52, 52);
+    padding: 1% 4%;
+    border-radius: 20px;
+}
+
+.price {
+    display: flex;
+    /* *durch align-items center verändere ich den default stretch der kinder */
+    align-items: center;
+    gap: 0 30px;
+
+}
+
+.price-house {
+    font-size: clamp(1rem, 1.5vw, 2rem)
+}
+
+.view-property-btn {
+    background-color: rgb(54, 52, 52);
+    font-size: clamp(.8rem, 1vw, 1.4rem);
+    padding: 3% 5%;
+    border-radius: 20px;
+}
