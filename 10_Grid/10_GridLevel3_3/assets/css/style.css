@@ -39,6 +39,11 @@ h1 {
     margin-bottom: 20px;
 }
 
+p {
+
+}
+
+
 /* ! H1 and Issue */
 
 /* # missing: first letter from News */
@@ -67,7 +72,7 @@ header .issue p {
 
 
 /* ! Main -articles + sponsor auseinander */
-/* * hiermit wird der article bereich vom sponsoren bereich getrennt */
+/* * hiermit wird der sponsoren bereich abgetrennt */
 main {
     min-height: 100vh;
     display: grid;
@@ -76,64 +81,63 @@ main {
 }
 
 
-/*  */
+/* * dies ist der Bereich H2 und drunter articles + image */
 main .hl-articles-img {
     grid-column: 1 / 2;
-/* grid-column weil es ein kind ist. display: grid weil es auch ein parent ist */
+    /* grid-column weil es ein kind von main ist.  */
+
+    /* As Parent: blockelements under each other anyways. but for h2 as fullwidth, grid needed */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
 }
 
+
 main .hl-articles-img h2{
+    /* in the grid fullwidth */
     grid-column: 1 / -1;
+
     text-align: center;
     font-family: var(--font);
     font-size: var(--h2);
 }
 
-main .hl-articles-img .article-img {
+/* ! articles and image under h2 */
+
+.wrapper {
+    /* als child von .hl-articles-img */
+    grid-column: 1/-1;
+    grid-row: 2/ -1;
+
+    /* as Parent for 1/2 article 1/2 img */
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "article1 img"
+    "article2 img"
+    "article3 img";
 }
 
-main .hl-articles-img .article-img h3 {
+.wrapper h3 {
     font-size: var(h3);
 }
 
-/* ! articles and image under h2 */
-/* main .article-img {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr)
-} */
+.wrapper p {}
+
+
+
+
 
 /* # hier hätte ich gerne hälfte */
-/* main .article {
-    grid-column: 1 / 2;
-} */
-
-/* main .img {
-    grid-column: 2 / 3;
-    width: 50%;
-    align-items: right;
-} */
 
 /* ! try with grid area */
-main .article-img {
+/* main .article-img {
     grid-template-areas: 
     "article img";
-}
+} */
 
-main .article-img .article {
+/* main .article-img .article {
     grid-area: article;
-    width: 50%;
+    width: 50%; */
     /* # ich hätte erwartet, dass der textbereich damit die hälfte vom article-img bereich bekommt */
     
 }
-
-main .article-img .img {
-    grid-area: img;
-}
-
 
 
 
@@ -170,7 +174,7 @@ main .sponsors .ads div {
 
 /* ! add for add */
 .youhere {
-    font-size: 6rem;
+    font-size: 5rem;
     text-transform: uppercase;
     font-family: var(--fontbold);
 }
