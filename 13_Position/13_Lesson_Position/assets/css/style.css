@@ -33,9 +33,11 @@ hr {
     /* * fixed */
     /* * absolute - richtet sich am body */
     /* * relative -  */
-    /* * sticky */
+    /* * sticky - es bleibt in seinem elterncontainer haften*/
 
     /* * z-index -defaultwert für alle elemente 0. je höher der Wert, desto höher die ebene auf dem das element liegt*/
+
+    /* # wir verwenden Position nicht für die globale  */
 
 
     /* !fixed */
@@ -53,7 +55,7 @@ header nav {
     top: 0px;
     right: 0px;
     left: 0px;
-    z-index: 1;
+    z-index: 3;
 }
 
 header img {
@@ -101,6 +103,7 @@ header img {
 
 
 /* ! Absolute Relative */
+/* - wenn ein element absolute platziert werden soll, sollte der parent position relativ zu geben. ansonsten richtet sich absolute am body */
 .abso {
     height: 1000px;
     background-color: thistle;
@@ -121,8 +124,6 @@ header img {
 
     /* - der parent braucht position relative, damit sich position abolute im child an etwas richten kann */
     position: relative;
-
-
 }
 
 .abso svg {
@@ -159,4 +160,64 @@ header img {
     width: 200px;
     margin-left: -40px;
     z-index: 2;
+}
+
+
+/* ! Project California */
+
+.cali {
+    min-height: 900px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.cali div {
+    max-width: 250px;
+}
+
+.cali h1 {
+    font-size: 45px;
+}
+
+.cali img {
+    position: absolute;
+
+    
+}
+
+.cali img:nth-of-type(1) {
+    top: -50px;
+    right: 100px;
+    width: 330px;
+    height: 219px;
+    z-index: 100;
+}
+
+.cali img:nth-of-type(2) {
+    top: 280px;
+    left: 55px;
+    width: 330px;
+    height: 219px;
+}
+
+.cali img:nth-of-type(3) {
+    bottom: 150px;
+    right: 0px;
+    width: 330px;
+    height: 219px;
+}
+
+@media screen and (max-width: 1035px) {
+    .cali img:nth-of-type(2) {
+        display:none;
+    }
+
+    .cali img:nth-of-type(3) {
+        bottom: 100px;
+        right: 0px;
+    }
 }
