@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+hr {
+    margin: 80px 0;
+}
+
+/* ! HEADER */
+
+/* ? Welche Position Attribute gibt es */
+    /* * static -> default */
+
+    /* - diese brechen das element komplett aus dem layout raus */
+    /* * fixed */
+    /* * absolute - richtet sich am body */
+    /* * relative -  */
+    /* * sticky - es bleibt in seinem elterncontainer haften*/
+
+    /* * z-index -defaultwert für alle elemente 0. je höher der Wert, desto höher die ebene auf dem das element liegt*/
+
+    /* # wir verwenden Position nicht für die globale  */
+
+
+    /* !fixed */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: cornflowerblue;
+    box-shadow: 0 0 10px black;
+    padding: 2vh 10px;
+
+    position: fixed;
+    
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
+header img {
+    margin-top: 48px;
+}
+
+/* ! Fixed */
+.icon svg {
+    fill: rgb(100, 149, 237, 0.6);
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+}
+
+.icon svg:hover {
+    transform: scale(1.2);
+    fill: rgb(100, 149, 237);
+}
+
+
+
+/* ! Sticky */
+/* * positionierung im Elternelement */
+.sticky {
+    background-color: thistle;
+    min-height: 800px;
+}
+
+.sticky div {
+    background-color: bisque;
+    border: 1px solid teal;
+    height: 150px;
+    width: 150px;
+/* - haftet sich an das Elternelement. dazu braucht der parent eine min-height */
+    position: sticky;
+    top: 70px;
+    left: 230px;
+}
+
+
+/* ! Absolute Relative */
+/* - wenn ein element absolute platziert werden soll, sollte der parent position relativ zu geben. ansonsten richtet sich absolute am body */
+.abso {
+    height: 1000px;
+    background-color: thistle;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.abso div {
+    width: 80%;
+    max-width: 600px;
+    background-color: salmon;
+    border-radius: 30px;
+    box-shadow: 0 0 10px black;
+    padding: 30px;
+    margin: auto;
+
+    /* - der parent braucht position relative, damit sich position abolute im child an etwas richten kann */
+    position: relative;
+}
+
+.abso svg {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+    /* - absolute richtet sich immer am kompletten body tag, wenn der parent kein position relative hat */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* ! Z-Index */
+
+.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index img {
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    z-index: 1;
+
+}
+
+.index div {
+    background-color: bisque;
+    height: 200px;
+    width: 200px;
+    margin-left: -40px;
+    z-index: 2;
+}
+
+
+/* ! Project California */
+
+.cali {
+    min-height: 900px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.cali div {
+    max-width: 250px;
+}
+
+.cali h1 {
+    font-size: 45px;
+}
+
+.cali img {
+    position: absolute;
+
+    
+}
+
+.cali img:nth-of-type(1) {
+    top: -50px;
+    right: 100px;
+    width: 330px;
+    height: 219px;
+    z-index: 100;
+}
+
+.cali img:nth-of-type(2) {
+    top: 280px;
+    left: 55px;
+    width: 330px;
+    height: 219px;
+}
+
+.cali img:nth-of-type(3) {
+    bottom: 150px;
+    right: 0px;
+    width: 330px;
+    height: 219px;
+}
+
+@media screen and (max-width: 1035px) {
+    .cali img:nth-of-type(2) {
+        display:none;
+    }
+
+    .cali img:nth-of-type(3) {
+        bottom: 100px;
+        right: 0px;
+    }
+}

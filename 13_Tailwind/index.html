@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--!  how to embedd tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="mx-[5vw] mb-35">
+        <nav class="flex justify-between items-center mb-15">
+            <img src="./assets/img/brand.png" alt="logo">
+            <div>
+                <!-- - if you dont want to use rem, use opt5 brackets to use other units -->
+                <a class="px-[2vw]" href="#">Home</a>
+                <a class="px-[2vw]" href="#">About</a>
+                <a class="px-[2vw]" href="#">Services</a>
+                <a class="px-[2vw]" href="#">Contact</a>
+            </div>
+            <a class="bg-[#6495ed] p-3 text-white rounded-full shadow-xl inline-block" href="#">Book now</a>
+        </nav>
+        
+<!-- ! Tailwind goes with "mobile first". with adding breakpoints for bigger screens -->
+<!-- - sm, md, lg, xl -->
+<!-- - md:flex-row  -ab der medium size soll flex-row gelten -->
+
+        <section class="flex flex-col md:flex-row justify-center items-center gap-6">
+            <div class="max-w-[390px]">
+                <p class="text-teal-500 mb-3">Dr. Matthew Anderson</p>
+                <h1 class="text-4xl font-bold mb-3">A dedicated doctor you can trust</h1>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum eget vel, nunc nulla feugiat. Metus ut.</p>
+                <a class="bg-[#6495ed] p-3 text-white rounded-full shadow-xl inline-block" href="#">Book an appointment</a>
+            </div>
+            <img class="md:max-w-[450px]" src="./assets/img/image 1.png" alt="">
+        </section>
+    </header>
+
+   
+    <main>
+        <!-- ! 3 buttons -->
+        <section class="flex flex-col gap-2 m-2 mb-35 md:flex-row md:max-w-[1000px] md:mx-auto">
+            <div class="bg-[#6495ed] p-3 rounded-xl text-white ">
+                <h3 class="text-xl font-bold ">24-hour service</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, itaque!</p>
+            </div>
+
+            <div class="bg-[#6495ed] p-3 rounded-xl text-white">
+                <h3 class="text-xl font-bold ">8 years of experience</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, itaque!</p>
+            </div>
+
+            <div class="bg-[#6495ed] p-3 rounded-xl text-white">
+                <h3 class="text-xl font-bold ">high quality care</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, itaque!</p>
+            </div>
+
+        </section>
+<!-- ! artz -->
+        <section class="flex flex-col md:flex-row justify-center items-center gap-6 mb-35">
+            <img class="md:max-w-[450px] mb-5" src="./assets/img/Group 9420.png" alt="">
+            
+            <div class="max-w-[390px] m-2">
+                <p class="text-teal-500 mb-3">Dr. Matthew Anderson</p>
+                <h1 class="text-3xl font-medium mb-3">A dedicated doctor you can trust</h1>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum eget vel, nunc nulla feugiat. Metus ut.</p>
+                <a class="bg-[#6495ed] p-3 text-white rounded-full shadow-xl inline-block" href="#">Book an appointment</a>
+            </div>
+            
+        </section>
+
+        <!-- ! circle img -->
+        <section class="bg-blue-50 flex flex-col md:flex-row justify-center items-center gap-6 mb-35 py-[100px]">
+           
+            
+            <div class="max-w-[390px] m-2">
+                <p class="text-teal-500 mb-3">Dr. Matthew Anderson</p>
+                <h1 class="text-3xl font-medium mb-3">A dedicated doctor you can trust</h1>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum eget vel, nunc nulla feugiat. Metus ut.</p>
+                <a class="bg-[#6495ed] p-3 text-white rounded-full shadow-xl inline-block transition-all hover:bg-teal-500 hover:text-xl" href="#">Book an appointment</a>
+            </div>
+
+             <img class="md:max-w-[450px] mb-5" src="./assets/img/Frame.png" alt="">
+        </section>
+
+    </main>
+    
+</body>
+</html>
