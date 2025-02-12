@@ -20,7 +20,7 @@ let e = true
 e = Number(e)
 console.log(e.toFixed(2));
 
-let f = true
+let f = false
 f = Number(f)
 console.log(f.toFixed(2));
 
