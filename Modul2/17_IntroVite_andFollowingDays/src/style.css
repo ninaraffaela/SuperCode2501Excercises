@@ -13,11 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+h1 {
+  color: teal;
+}
 
 a {
   font-weight: 500;
-  color: teal;
+  color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
