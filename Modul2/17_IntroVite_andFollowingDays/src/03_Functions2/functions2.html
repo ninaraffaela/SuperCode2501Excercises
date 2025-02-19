@@ -4,11 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functions2</title>
+    <link rel="stylesheet" href="./assets/css/functions2.css">
     <script type="module" src="./functions2.ts"></script>
-    <link rel="stylesheet" href="../style.css">
+   
 </head>
 <body>
+    <img src="./assets/img/brightness.webp" alt="switch dark light">
     <h1>Functions2</h1>
     <h2 class="change-color">Change my color</h2>
+    <form action="">
+        <input 
+        type="text" 
+        name="name" 
+        id="name" 
+        placeholder="Gib deinen Namen ein">
+
+        <input type="submit">
+        </form>
+
+    <hr>
+
+    <h3>Registrierung</h3>
+
+    <form class="register-form" action="">
+        <!-- with the for i can link it to the input field. for and id must have identical names. -->
+        <label for="user-name">Benutzername:</label> 
+        <input type="text" name="username" id="user-name"> 
+
+        <label for="user-mail">Email:</label> 
+        <input type="text" name="username" id="user-mail"> 
+
+        <label for="user-icon">Wähle dien Icon:</label> 
+        <select name="username" id="user-icon"> 
+            <option value="🖌️">🖌️</option>
+            <option value="🍀">🍀</option>
+            <option value="🦕">🦕</option>
+            <option value="🫐">🫐</option>
+            <option value="🎁">🎁</option>
+            <option value="🌳">🌳</option>
+            <option value="🐈">🐈</option>
+            <option value="🐕">🐕</option>
+        </select>
+
+        <label for="datenschutz">ich stimme den Datenschutzbedingungen zu</label>
+        <input type="checkbox" name="datenschutz" id="datenschutz">
+        <input type="submit">
+    </form>
+
+    <div class="output"></div>
 </body>
 </html>

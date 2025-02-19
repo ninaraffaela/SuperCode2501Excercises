@@ -1,0 +1,13 @@
+img {
+    width: 50px;
+}
+
+.dark {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+body {
+    transition: 0.25s ease-in;
+}
+

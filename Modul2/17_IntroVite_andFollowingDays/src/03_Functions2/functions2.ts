@@ -128,3 +128,87 @@ function changeColor2() {
         meineH2.innerText = "uuuh fancy new text";
     }
 }
+
+// ! Build a Switch between dark/light mode ☀
+// - pick the img tag. (without class or id, because now there is only one)
+const darkLightSwitch = document.querySelector("img");
+const bodyElement = document.querySelector("body");
+
+// - put the eventlistener to the img tag
+darkLightSwitch?.addEventListener("click", toggleDarkLighttMode);
+
+function toggleDarkLighttMode() {
+    if(bodyElement) {
+        bodyElement.classList.toggle("dark");
+    }
+}
+
+// ! VAlUE / FORM
+const nameInputForm = document.querySelector("form");
+const userNameInput = document.querySelector<HTMLInputElement>("#name"); //to tell js/ts that usage of value down ther is allowed.
+const outputDiv = document.querySelector(".output");
+
+// -submit can be used to look at the html input tag type submit
+nameInputForm?.addEventListener("submit", greetUser)
+
+//*it would refresh the page that 
+
+// function greetUser () {
+//     let userName;
+
+//     if(userNameInput){
+//         userName = userNameInput.value
+//     }
+
+//     if(outputDiv) {
+//         outputDiv.innerHTML = `<h3>Hallo ${userName}</h3>`;
+//     }
+// }
+
+// * tht way you prevent the reload, after reload of the page.!!!
+function greetUser (event: Event) {
+    event.preventDefault();
+
+    let userName;
+
+    if(userNameInput){
+        userName = userNameInput.value
+    }
+
+    if(outputDiv) {
+        outputDiv.innerHTML = `<h3>Hallo ${userName}</h3>`;
+    }
+}
+
+// ! Register Form
+const registerForm = document.querySelector(".register-form");
+const userName = document.querySelector<HTMLInputElement>("#user-name");
+const userMail = document.querySelector<HTMLInputElement>("#user-mail");
+const userIcon = document.querySelector<HTMLInputElement>("#user-icon");
+const userDatenschutz = document.querySelector<HTMLInputElement>("#datenschutz");
+
+registerForm?.addEventListener("submit", confirmRegistry);
+
+function confirmRegistry(event:Event){
+    event.preventDefault();
+
+    if (!userName || !userMail || !userIcon || !userDatenschutz) {
+        console.log("Eines oder mehrere Formularelemente wurden nicht gefunden");
+    
+    } else {
+        const name = userName.value;
+        const email = userMail.value;
+        const icon = userIcon.value;
+        const datenschutz = userDatenschutz.checked;
+
+        if (outputDiv) {
+            outputDiv.innerHTML =
+            `<h4>Erfolgreich registriert</h4>
+            <p>Your Username: ${name}</p>
+            <p>Your mail: ${email}</p>
+            <p>Your Icon: ${icon}</p>
+            <p>DatenschutzRichtlinien akzeptiert?: ${datenschutz}</p>`;
+        }
+    }
+
+}
