@@ -163,4 +163,125 @@ const copiedReverseArray = [...marziosLieblingsAutos].reverse();
 console.log(copiedReverseArray);
 
 
+// ! SEARCH IN ARRAYS FOR SINGLE ELEMENTS
+console.log(
+    "%c === SEARCH FOR SINGLE ELEMENTS === ", "background-color: teal"
+);
 
+const birds = [
+    "Wellensittich",
+    "Rabe",
+    "Maise",
+    "Specht",
+    "🐧",
+    "Drossel",
+    "Amsel",
+    "Tannenhäher",
+    "🐧",
+    "Adler",
+    "Spatz",
+  ];
+
+//   - indexOf()
+// you get the index. first appearance of the target.  
+//  if target not found you get -1
+
+const indexOfPenguin = birds.indexOf("🐧");
+console.log(indexOfPenguin);
+//  you´d get the other penguin with const indexOfPenguin = birds.indexOf("🐧",5); Starts the search at position 5
+
+// - lastIndexOf()
+// last appearance of the target. you get the index.
+const lastindexOfPenguin = birds.lastIndexOf("🐧");
+console.log(lastindexOfPenguin);
+
+// - includes()
+// is the target included? gets a true or false
+const includesPenguin = birds.includes("🐧"); // needs the exact value. "Ra" to search for "Rabe" won´t work
+console.log(includesPenguin);
+
+// - find()
+// you get the first found target.
+//  you can define the search
+//  if not found you get -1
+//                             1.  name the elements of the array (just a placeholder for the elements)
+//                                          2. check the element. run function startsWith()
+const birdWithA = birds.find((singleBird) => singleBird.startsWith("A"));
+console.log(birdWithA);
+
+
+
+const drossel = birds.find((singleBird) => singleBird === "Drossel");
+console.log(drossel);
+
+
+
+
+// ! EDIT MULTIPLE ELEMENTS WITH MAP() UND FOREACH()
+console.log(
+    "%c === EDIT MULTIPLE ELEMENTS === ", "background-color: teal"
+);
+
+// -  MAP()
+// runs the function for every element of the original array
+// gives you a new array
+// function foreach() would do the same BUT does not give you a new array
+
+// ? all elements in Birds should get "!" at the end.
+// * instead of
+// birds[0] = birds[0] + "!";
+// birds[1] = birds[1] + "!";
+// birds[2] = birds[2] + "!";
+
+// * use map() instead
+const birdsWithExclamationMark = birds.map((singleBird) => singleBird + "!");
+console.log(birdsWithExclamationMark);
+
+// ? give me the length of each element
+const birdLength = birds.map((singleBirds) => singleBirds.length);
+console.log(birdLength);
+
+// ? write all the Birds in uppercase
+const upperCaseBirds = birds.map((singleBird) => singleBird.toUpperCase());
+console.log(upperCaseBirds);
+
+// ? complex logics possible. 
+const birdsWithAUpperCase = birds.map((singleBird) => {
+    if (singleBird.startsWith("A")) {
+        return singleBird.toUpperCase();
+    } else {
+        return singleBird.toLowerCase()
+    }
+})
+console.log(birdsWithAUpperCase);
+
+
+// - FOREACH()
+// same logic as map() BUT doesn´t give you a new array
+
+birds.forEach((singleBird) => console.log(`Das it ein ${singleBird}`));
+
+// * FOR MAP() and FOREACH() you can use a second Parameter, which will be the index.
+birds.forEach((singleBird, indexName) => console.log(`Das it ein ${singleBird} und hat den Index ${indexName}`));
+
+
+
+// ! FILTER
+console.log(
+    "%c === FILTER === ", "background-color: teal"
+);
+//  with find() we could search, but only got the first element. Filter gets all of them
+// gives back a new array.
+
+// ? all birds starting with A
+// * trust that the array elements start with capital letters
+// const allBirdsWithA = birds.filter((singleBird) => singleBird.startsWith("A"));
+
+// * Better. turn the elements in to lowercases or uppercases and compare then
+const allBirdsWithA = birds.filter((singleBird) => singleBird.toLowerCase().startsWith("a"));
+console.log(allBirdsWithA);
+
+
+// ? get all the penguins and Raven
+const allPenguinsAndRaven = birds.filter((singleBird) => singleBird === "🐧" || singleBird === "Rabe");
+console.log(allPenguinsAndRaven);
