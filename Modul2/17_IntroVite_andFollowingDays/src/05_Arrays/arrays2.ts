@@ -285,3 +285,68 @@ console.log(allBirdsWithA);
 // ? get all the penguins and Raven
 const allPenguinsAndRaven = birds.filter((singleBird) => singleBird === "🐧" || singleBird === "Rabe");
 console.log(allPenguinsAndRaven);
+
+
+
+// !  FILTER from Array
+const movies = [
+    "Inception - Science-Fiction",
+    "Der Pate - Drama",
+    "Pulp Fiction - Thriller",
+    "Die Verurteilten - Drama",
+    "Interstellar - Science-Fiction",
+    "Das Schweigen der Lämmer - Horror",
+    "Forrest Gump - Komödie",
+    "Matrix - Action",
+    "Schindlers Liste - Drama",
+    "Ziemlich beste Freunde - Komödie",
+  ];
+
+  const genreInput = document.querySelector<HTMLSelectElement>("#genre");
+  const outputDiv = document.querySelector("div");
+//   console.log(userGenre);
+
+// * Option easy
+// genreInput?.addEventListener("change", filterMovies);
+// function filterMovies() {
+//     // console.log("geht");
+    
+//     if (genreInput){
+//         const selectedGenre = genreInput.value;
+//         // console.log(selectedGenre);
+
+//         const allMoviesWithSelectedGenre = movies.filter((singleMovie) => singleMovie.includes(selectedGenre));
+//         // console.log(allMoviesWithSelectedGenre);
+
+//         if(outputDiv){
+//             outputDiv.innerHTML= allMoviesWithSelectedGenre.join(", ");
+//         }
+//     }
+// }
+
+
+// * option advanced - get only parts of the array elements
+genreInput?.addEventListener("change", filterMovies);
+function filterMovies() {
+    // console.log("geht");
+    
+    if (genreInput){
+        const selectedGenre = genreInput.value;
+        // console.log(selectedGenre);
+
+        const allMoviesWithSelectedGenre = movies.filter((singleMovie) => singleMovie.includes(selectedGenre));
+        // console.log(allMoviesWithSelectedGenre);
+
+        const allMoviesOnlyTitle = allMoviesWithSelectedGenre.map((singleMovie) => {
+            const splittedMovie = singleMovie.split(" - ");
+            console.log(splittedMovie); // gives you arrays with moviename, moviegenre
+            const onlyTitle = splittedMovie[0];
+            return onlyTitle
+        })
+        
+
+        if(outputDiv){
+            allMoviesOnlyTitle.forEach((singleMovie) => outputDiv.innerHTML += `<li>${singleMovie}</li>`)
+        }
+    }
+}
