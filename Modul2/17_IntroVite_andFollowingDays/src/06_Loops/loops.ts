@@ -9,7 +9,14 @@ console.log("Hello World");
 // ! FOR-LOOP
 // for (start, condition,)
 
-
+//+    Anfangswert          Bedingung    Zähler
+//         ⬇️                  ⬇️          ⬇️
+for (let index: number = 1; index <= 5; index++) {
+    console.log("Hello World");
+  }
+  
+  //$ index/ i = best practice
+  //$ dennoch frei waehlbar
 
 // # DANGER!!! INFINITY LOOPS. LISTEN:
 // ALWAYS CHECK IF YOUR CONDITION CAN BE REACHED - EVER!!
@@ -25,11 +32,14 @@ console.log("Hello World");
 
 
 // ! BASIC LOOP EXAMPLES
+// * count from 13 to 23. 
 for (let i = 13; i < 24; i++) {
     console.log("aktueller index:", i);
 }
 
+
 // * count up in 2er Schritte
+// i += 2 means i = i + 2
 for (let i =0; i < 20; i +=2) {
     console.log("+2", i);
 }
@@ -40,16 +50,14 @@ for (let i = 20; i >= 0; i--) {
 }
 
 
-// * check all numbers from 0 - 30. only log the ones, that are /3s
+// * check all numbers from 0 - 30. only log the ones, that are divisable with 3
 
 for (let i = 0; i <= 30; i++) {
-    // i % 3 === 0 ? console.log(i) : "";
-}
-
-// if (i % 3 === 0){
-//     console.log(i);
-// # EDIT NEEDED: check this part above again.
-
+    //   i % 3 === 0 ? console.log(i) : "";
+    if (i % 3 === 0) {
+      console.log(i);
+    }
+  }
 
 
 
