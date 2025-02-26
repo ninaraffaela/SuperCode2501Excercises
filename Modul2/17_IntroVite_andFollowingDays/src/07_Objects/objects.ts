@@ -282,3 +282,28 @@ const order4324 = {
 
 order4324.status = OrderStatus.InDelivery;
 console.log("Bestellung wurde verschickt. Status => ", order4324.status)
+
+
+// ! FUNCTIONS IN OBJECTS
+// -functions could be part of objects
+// - classic fn / arrow fn
+
+type Christian = {
+    name: string;
+    age: number;
+    greet: () => void; //arrow FN
+    sayHello: () => void; //classic FN
+};
+
+const christian: Christian = {
+    name: "Christian",
+    age: 32,
+    // arrow FN
+    greet: () => console.log("Hallo von Christian"),
+    sayHello: function() {
+        console.log(`Hi i´m ${this.name} - but call me Herrscher der Meere`);
+    }
+};
+
+christian.greet();
+christian.sayHello();
