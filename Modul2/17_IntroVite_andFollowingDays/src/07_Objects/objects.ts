@@ -30,6 +30,8 @@ const jurassicParkMovie = {
 
 
 // ! TYPE OF OBJECT
+// * define the types of the object
+// * keyword: type
 type Movie = {
     title: string;
     year: number;
@@ -153,8 +155,130 @@ const deepCopy2 = structuredClone(originalObject);
 deepCopy2.pokemonCards.push("Elisian");
 console.log(deepCopy2);
 
+// #add version 3 her later
+
+
+
+// ! Interfaces
+console.log("%c ==== interfaces ===", "Background-color: teal");
+// * alternative for type
+// * define properties and the types of the object
+// * keyword: interface
+// * we don´t need =
+
+interface IMovie {
+    title: string;
+    year: number;
+    director: string;
+    description: string;
+    actors: string[];
+    rating?: number; // ? - this one is optional
+};
+
+const matrixMovie: IMovie = {
+    title: "Matrix",
+    year: 1999,
+    director: "Lana Wachowski",
+    description: "🛑🔵????",
+    actors: ["Keanu Reaves", "Lawrence Fishburne"]
+};
+
+// * when do i use type, when do i use interface?
+// - personal preferences
+// - type good for easy definitions or to use union-types
+// type ISBN = number | string
+
+type Response = "yes" | "no" | "maybe";
+let answer: Response = "yes";
+// answer = "sure"; //not possible. wrong type
+
+// - interface good to define object structures and to have them extendable
+interface IDetailedMovie extends IMovie {
+    genre: string[];
+};
+
+const terminatorMovie: IDetailedMovie = {
+    title: "Terminator",
+    year: 1984,
+    actors: ["Arnold Schwarzenegger"],
+    director: "James Cameron",
+    description: "🤖",
+    genre: ["SciFi", "Action"],
+};
+console.log(terminatorMovie);
 
 
 
 
+// ! ENUMS
+console.log("%c ==== Enums ===", "Background-color: teal");
+// * Enum is a list of predefined options, one can use for variables
+// * makes shure, everyone uses the same definitions
+// * keyword: enum
 
+const mondayMina = "Montag";
+const mondayMona = "Monday";
+const mondayHao = "Mo";
+
+function printDay(day: string) {
+    if(day === "Monday" || day === "Montag" || day === "Mo"){
+        console.log("Today is Monday");
+    }
+};
+printDay(mondayMina);
+
+
+// * better use Enums
+// - almost like a shared vocabulary
+// - create a Enum with predefined weekdays
+
+enum Weekdays {
+    Monday, // = 0
+    Tuesday, // = 1
+    Wednesday, // = 2
+    Thursday, // = 3
+    Friday, // = 4
+    Saturday, // = 5
+    Sunday // = 6
+};
+
+console.log(Weekdays); // gives back the whole object
+console.log(Weekdays.Monday); // gives back the index 0
+
+const monday = Weekdays.Monday
+console.log(Weekdays[monday]); // gives back the Word "Monday"
+console.log(Weekdays[0]); // gives back the Word "Monday"
+
+
+
+enum Weekdays2 {
+    Monday = "Montag",
+    Tuesday = "Dienstag",
+    Wednesday = "Mittwoch",
+    Thursday = "Donnerstag",
+    Friday = "Freitag",
+    Saturday = "Samstag",
+    Sunday = "Sonntag",
+};
+
+console.log(Weekdays2.Monday);
+
+
+// * EXAMPLE 
+enum OrderStatus {
+    Created = "Created",
+    Accepted = "Accepted",
+    InProgress = "In Progress",
+    InDelivery = "In Delivery",
+    Delivered = "Delivered",
+    Cancelled = "Cancelled"
+};
+
+const order4324 = {
+    number: 4324,
+    customerNumber: 123,
+    status: OrderStatus.Created,
+};
+
+order4324.status = OrderStatus.InDelivery;
+console.log("Bestellung wurde verschickt. Status => ", order4324.status)
