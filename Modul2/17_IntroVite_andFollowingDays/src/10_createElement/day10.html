@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10 createElement, appendChild</title>
+    <script type="module" src="./day10.ts"></script>
+    <link rel="stylesheet" href="./assets/css/day10.css">
+    <style>
+        /* tristan memorial styling */
+        img {
+          max-width: 100%;
+          border-radius: 0.5rem;
+        }
+        button {
+          margin-bottom: 1rem;
+          /* display: flex; */
+        }
+        .products {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.5rem;
+        }
+        .shop-item {
+          padding: 2rem;
+          background-color: #eee;
+          border: 1px solid #464646;
+          border-radius: 0.5em;
+        }
+      </style>
+</head>
+<body>
+    <h1>👾 Super Online Shop</h1>
+    <button class="price-asc">Preis aufsteigend</button>
+    <button class="price-desc">Preis absteigend</button>
+    <input type="text" placeholder="find your product">
+    <button>Suchen</button>
+    <section class="products"></section>
+
+</body>
+</html>
