@@ -10,6 +10,8 @@
 const shopContainer = document.querySelector(".products");
 const sortAscBtn = document.querySelector(".prise-asc");
 const sortDescBtn = document.querySelector(".price-desc");
+const userSearchInput = document.querySelector("input");
+const searchBtn = document.querySelector(".search-btn");
 
 type shopItem = {
   productName: string;
@@ -147,11 +149,30 @@ renderProducts(shopItemsArr);
 
 sortAscBtn?.addEventListener("click", sortPriceAscending);
 sortDescBtn?.addEventListener("click", sortPriceDescending);
+searchBtn?.addEventListener("click",() => 
+  filterProducts(userSearchInput ? userSearchInput.value : "")
+);
+// how to react to enter? suggestion from max
+// const inputField = document.getElementById("searchInput") as HTMLInputElement;
+
+// inputField.addEventListener("keydown", (event) => {
+//   if (event.key === "Enter") {
+//     event.preventDefault(); // Verhindert das Absenden eines Formulars
+//     console.log("Enter wurde gedrückt! Suche ausführen...");
+//   }
+// });
+
+
+// how to react to every letter?
+// userSearchInput?.addEventListener("keyup", () => 
+//   filterProducts(userSearchInput ? userSearchInput.value : "")
+// );
 
 function sortPriceAscending() {
   console.log("i´ve been clicked");
   const sortedProducts = [...shopItemsArr];
   sortedProducts.sort((a, b) => a.price - b.price);
+  renderProducts(sortedProducts);
 }
 
 function sortPriceDescending() {
@@ -162,4 +183,11 @@ function sortPriceDescending() {
   sortedProducts.sort((a, b) => b.price - a.price);
   renderProducts(sortedProducts);
   //
+};
+
+function filterProducts(searchTerm: string) {
+  let filteredProducts = [...shopItemsArr]
+  filteredProducts = filteredProducts.filter((itemPizza) => itemPizza.productName.toLowerCase().includes(searchTerm.toLowerCase()))
+  renderProducts(filteredProducts);
+  
 }
