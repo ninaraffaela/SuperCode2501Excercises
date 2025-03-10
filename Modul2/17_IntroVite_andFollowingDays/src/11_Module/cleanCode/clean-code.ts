@@ -145,5 +145,3 @@ function getFullName(person: {firstName: string, lastName: string}): string {
 // don´t implement things you MIGHT need in the future. or that would complement the current functionality
 
 
-// CodeSmell
-//
