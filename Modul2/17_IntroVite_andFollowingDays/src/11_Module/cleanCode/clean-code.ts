@@ -135,8 +135,8 @@ function getFullName(person: {firstName: string, lastName: string}): string {
     return person.firstName + ' ' + person.lastName;
 };
 
-// const userFullName = getFullName(user);
-// const adminFullName = getFullName(admin);
+const userFullName = getFullName("user");
+const adminFullName = getFullName("admin");
 
 
 
