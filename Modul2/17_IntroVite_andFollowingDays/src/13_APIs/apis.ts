@@ -6,7 +6,7 @@
 // REST = style of architecture
 // REST enables the transfer of date through the internet, with HTTP or HTTPS Protocols
 
-// ! Request, Respnse
+// ! Request, Response
 // Request: what do i want?
 // Response: what do i have?
 
